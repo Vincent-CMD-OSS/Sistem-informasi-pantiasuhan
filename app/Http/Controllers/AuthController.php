@@ -43,4 +43,12 @@ class AuthController extends Controller
 
         return redirect('/');
     }
+
+
+    // INI UNTUK REGISTER
+    public function showRegisterForm()
+    {
+        return view('admin.register.register');
+    }
+    // INI AKHIR DARI REGISTER
 }
