@@ -51,4 +51,14 @@ class AuthController extends Controller
         return view('admin.register.register');
     }
     // INI AKHIR DARI REGISTER
+
+    public function index() 
+    {
+        return view('user.pages.index');
+    }
+
+    public function organisation() 
+    {
+        return view('user.pages.organisation');
+    }
 }
