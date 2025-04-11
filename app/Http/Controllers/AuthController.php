@@ -14,35 +14,26 @@ class AuthController extends Controller
     {
         return view('admin.login.login');
     }
+     // INI AKHIR DARI LOGIN
 
-    // Proses login
-    public function login(Request $request)
-    {
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required'],
-        ]);
+     public function login(Request $request)
+     {
+         $credentials = $request->validate([
+             'email' => ['required', 'email'],
+             'password' => ['required']
+         ]);
+ 
+         if (Auth::attempt($credentials)) {
+             $request->session()->regenerate();
+ 
+             return redirect()->intended('/dashboard'); // atau redirect sesuai role
+         }
+ 
+         return back()->with('error', 'Email atau password salah.');
+     }
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended('/dashboard');
-        }
 
-        throw ValidationException::withMessages([
-            'email' => 'Email atau password salah.',
-        ]);
-    }
 
-    // Logout
-    public function logout(Request $request)
-    {
-        Auth::logout();
-
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        return redirect('/');
-    }
 
 
     // INI UNTUK REGISTER
