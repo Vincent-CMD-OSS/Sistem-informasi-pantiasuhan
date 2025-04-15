@@ -64,4 +64,9 @@ class AuthController extends Controller
     {
         return view('user.pages.sejarah');
     }
+
+    public function pengenalan()
+    {
+        return view('user.pages.pengenalan');
+    }
 }

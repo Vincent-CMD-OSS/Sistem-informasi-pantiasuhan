@@ -208,7 +208,7 @@
 						</p>
 					</div>
 					<div class="btn-wrap">
-						<a href="#" class="btn btn-accent btn-xmedium btn-rounded">More Information</a>
+						<a href="{{ route('pengenalan') }}"class="btn btn-accent btn-xmedium btn-rounded">More Information</a>
 					</div>
 				</div><!--pengenalan-block-->
 			</div>

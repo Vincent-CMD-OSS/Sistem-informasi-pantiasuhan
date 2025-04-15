@@ -46,7 +46,9 @@ Route::get('/sejarah', function () {
     return view('user.pages.sejarah');
 })->name('sejarah');
 
-
+Route::get('/pengenalan', function () {
+    return view('user.pages.pengenalan');
+})->name('pengenalan');
 
 
 Route::get('/galeri', function () {
