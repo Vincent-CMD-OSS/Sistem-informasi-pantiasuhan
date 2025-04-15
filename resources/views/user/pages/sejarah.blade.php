@@ -44,8 +44,11 @@
                 </div>
             </div>
 
+            {{-- Jika ingin link kecil ke beranda --}}
             <div class="text-center mt-5">
-                <a href="{{ url('/') }}" class="btn btn-primary btn-small">Kembali ke Beranda</a>
+                <a href="{{ url('/') }}" class="text-decoration-none text-secondary">
+                    ← Kembali ke Beranda
+                </a>
             </div>
         </div>
     </div>
