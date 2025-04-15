@@ -33,6 +33,13 @@ class AuthController extends Controller
      }
 
 
+    public function dashboard()
+    {
+        if (!Auth::check()) {
+            return redirect()->route('admin.login');
+        }
+        return view('admin.pages.dashboard'); // atau sesuaikan path view-nya
+    }
 
 
 

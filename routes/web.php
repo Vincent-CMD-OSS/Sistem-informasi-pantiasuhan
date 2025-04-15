@@ -1,15 +1,98 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use Illuminate\Container\Attributes\Auth;
+
 use App\Http\Controllers\AuthController;
-use Illuminate\Container\Attributes\Auth;
+use App\Http\Controllers\KegiatanPantiasuhanController;
+use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\GaleriController;
 
-Route::get('/', [AuthController::class, 'showLoginForm'])->name('admin.login');
+
+
+Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('admin.login.submit');
-// Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('admin.register');
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('admin.register');
+Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
+
+
+
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+
+    // Dashboard
+    Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
+
+    // Kegiatan 
+    Route::resource('/kegiatan', KegiatanPantiasuhanController::class);
+
+    // Jadwal
+    Route::get('/jadwal', [JadwalController::class, 'index'])->name('jadwal.index');
+    Route::post('/jadwal/operasional', [JadwalController::class, 'updateOperasional'])->name('jadwal.operasional.update');
+    Route::post('/jadwal/khusus', [JadwalController::class, 'storeKhusus'])->name('jadwal.khusus.store');
+    Route::delete('/jadwal/khusus/{id}', [JadwalController::class, 'destroyKhusus'])->name('jadwal.khusus.destroy');
+
+});
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+Route::get('/galeri', function () {
+    $kegiatan = App\Models\KegiatanPantiasuhan::latest()->get();
+    return view('galeri', compact('kegiatan'));
+});
+
+Route::get('/jadwal', [JadwalController::class, 'jadwalPublik']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CADANGAN JADWAL
+// Route::get('/jadwal', [\App\Http\Controllers\JadwalController::class, 'jadwalPublik'])->name('jadwal.publik');
+
+
+
+// CADANGAN LOGIN
+// Route::post('/login', [AuthController::class, 'login'])->name('admin.login');
+
+
+// INI UNTUK CADANGAN
 // Route::get('/', [AuthController::class, 'index'])->name('home');
-Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
+// Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
+
+
+// CADANGAN ADMIN
+// Route::prefix('admin')->middleware(['auth'])->group(function () {
+//     Route::get('/jadwal', [JadwalController::class, 'index'])->name('jadwal.index');
+//     Route::post('/jadwal/operasional', [JadwalController::class, 'updateOperasional'])->name('jadwal.operasional.update');
+//     Route::post('/jadwal/khusus', [JadwalController::class, 'storeKhusus'])->name('jadwal.khusus.store');
+//     Route::delete('/jadwal/khusus/{id}', [JadwalController::class, 'destroyKhusus'])->name('jadwal.khusus.destroy');
+// });
+
+
+
+// CADANGAN LAINNYA
+// Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard')->middleware('auth');
+
+// Group route admin (harus login)
+// Route::middleware(['auth'])->group(function () {
+//     Route::resource('admin/kegiatan', App\Http\Controllers\KegiatanPantiasuhanController::class);
+// });

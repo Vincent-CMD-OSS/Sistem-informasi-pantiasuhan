@@ -10,23 +10,39 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        User::create([
-            'nama' => 'Admin 1',
-            'email' => 'jeremimangatur21s08@gmail.com',
-            'password' => Hash::make('password123'), // Gunakan Hash!
-        ]);
+        $email = 'jeremimangatur21s08@gmail.com';
 
-        // Bisa tambah user lain juga:
-        // User::create([
-        //     'name' => 'User Biasa',
-        //     'email' => 'user@example.com',
-        //     'password' => Hash::make('userpass'),
-        // ]);
+        // Cek apakah email sudah ada, kalau belum baru insert
+        if (!User::where('email', $email)->exists()) {
+            User::create([
+                'nama' => 'Admin 1',
+                'email' => $email,
+                'password' => Hash::make('password123'),
+            ]);
+                // Bisa tambah user lain juga:
+            // User::create([
+            //     'name' => 'User Biasa',
+            //     'email' => 'user@example.com',
+            //     'password' => Hash::make('userpass'),
+            // ]);
 
-        // User::create([
-        //     'name' => 'Pemain',
-        //     'email' => 'user@example.com',
-        //     'password' => Hash::make('userpass'),
-        // ]);
+            // User::create([
+            //     'name' => 'Pemain',
+            //     'email' => 'user@example.com',
+            //     'password' => Hash::make('userpass'),
+            // ]);
+            // Bisa tambah user lain juga:
+            // User::create([
+            //     'name' => 'User Biasa',
+            //     'email' => 'user@example.com',
+            //     'password' => Hash::make('userpass'),
+            // ]);
+
+            // User::create([
+            //     'name' => 'Pemain',
+            //     'email' => 'user@example.com',
+            //     'password' => Hash::make('userpass'),
+            // ]);
+        }
     }
 }
