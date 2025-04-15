@@ -10,7 +10,7 @@ use App\Http\Controllers\GaleriController;
 
 
 
-Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
+// Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('admin.login.submit');
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('admin.register');
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
@@ -42,6 +42,9 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
 
 
+Route::get('/sejarah', function () {
+    return view('user.pages.sejarah');
+})->name('sejarah');
 
 
 
@@ -75,8 +78,8 @@ Route::get('/jadwal', [JadwalController::class, 'jadwalPublik']);
 
 
 // INI UNTUK CADANGAN
-// Route::get('/', [AuthController::class, 'index'])->name('home');
-// Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
+Route::get('/', [AuthController::class, 'index'])->name('home');
+Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
 
 
 // CADANGAN ADMIN

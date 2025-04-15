@@ -179,7 +179,7 @@
 
 	<!-- INI UNTUK BAGIAN PORTOFOLIO -->
 
-	@include('user.partials.portofolio')
+	{{-- @include('user.partials.portofolio') --}}
 
 	<!-- INI AKHIR BAGIAN PORTOFOLIO -->
 
@@ -242,7 +242,7 @@
 					</div>
 
 					<div class="btn-wrap">
-						<a href="#" class="btn btn-accent btn-xmedium btn-rounded">More Information</a>
+						<a href="{{ route('sejarah') }}" class="btn btn-accent btn-xmedium btn-rounded">More Information</a>
 					</div>
 				</div><!--pengenalan-block-->
 			</div>

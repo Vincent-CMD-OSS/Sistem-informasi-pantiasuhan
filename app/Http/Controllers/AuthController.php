@@ -59,4 +59,9 @@ class AuthController extends Controller
     {
         return view('user.pages.organisation');
     }
+
+    public function sejarah() 
+    {
+        return view('user.pages.sejarah');
+    }
 }
