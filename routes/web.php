@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 // use Illuminate\Container\Attributes\Auth;
 
+
+// use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KegiatanPantiasuhanController;
 use App\Http\Controllers\JadwalController;
-use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\ProfilPantiController;
+use App\Http\Controllers\KebutuhanController;
 
 
 
@@ -31,8 +34,20 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::post('/jadwal/khusus', [JadwalController::class, 'storeKhusus'])->name('jadwal.khusus.store');
     Route::delete('/jadwal/khusus/{id}', [JadwalController::class, 'destroyKhusus'])->name('jadwal.khusus.destroy');
 
+    // Profil
+    Route::get('/profil', [ProfilPantiController::class, 'index'])->name('admin.profil.index');
+    Route::post('/profil', [ProfilPantiController::class, 'store'])->name('admin.profil.store');
+
+    // Kebutuhan
+    Route::resource('kebutuhan', KebutuhanController::class);
+
+
 });
 
+// Route::middleware(['auth'])->prefix('admin')->group(function () {
+//     Route::get('/profil', [ProfilPantiController::class, 'index'])->name('admin.profil.index');
+//     Route::post('/profil', [ProfilPantiController::class, 'store'])->name('admin.profil.store');
+// });
 
 
 
@@ -52,6 +67,11 @@ Route::get('/galeri', function () {
 });
 
 Route::get('/jadwal', [JadwalController::class, 'jadwalPublik']);
+
+Route::get('/profil', [ProfilPantiController::class, 'show'])->name('profil.show');
+
+Route::get('/kebutuhan', [KebutuhanController::class, 'showPublic'])->name('kebutuhan.public');
+
 
 
 

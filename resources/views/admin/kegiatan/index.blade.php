@@ -20,6 +20,7 @@
             <th>Nama Kegiatan</th>
             <th>Lokasi</th>
             <th>Tanggal</th>
+            <th>Deskripsi</th>
             <th>Aksi</th>
         </tr>
     </thead>
@@ -30,6 +31,7 @@
                 <td>{{ $item->nama_kegiatan }}</td>
                 <td>{{ $item->lokasi }}</td>
                 <td>{{ \Carbon\Carbon::parse($item->tanggal_kegiatan)->format('d M Y') }}</td>
+                <td>{{ $item->deskripsi }}</td>
                 <td>
                     <a href="{{ route('kegiatan.edit', $item->kegiatan_id) }}">Edit</a> |
                     <form action="{{ route('kegiatan.destroy', $item->kegiatan_id) }}" method="POST" style="display:inline;">
