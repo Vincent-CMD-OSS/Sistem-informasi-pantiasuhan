@@ -13,7 +13,7 @@ use App\Http\Controllers\KebutuhanController;
 
 
 
-Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
+// Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('admin.login.submit');
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('admin.register');
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
@@ -57,8 +57,13 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
 
 
+Route::get('/sejarah', function () {
+    return view('user.pages.sejarah');
+})->name('sejarah');
 
-
+Route::get('/pengenalan', function () {
+    return view('user.pages.pengenalan');
+})->name('pengenalan');
 
 
 Route::get('/galeri', function () {
@@ -95,8 +100,8 @@ Route::get('/kebutuhan', [KebutuhanController::class, 'showPublic'])->name('kebu
 
 
 // INI UNTUK CADANGAN
-// Route::get('/', [AuthController::class, 'index'])->name('home');
-// Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
+Route::get('/', [AuthController::class, 'index'])->name('home');
+Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
 
 
 // CADANGAN ADMIN
