@@ -13,10 +13,22 @@ use App\Http\Controllers\KebutuhanController;
 
 
 
-// Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
+Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('admin.login.submit');
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('admin.register');
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
+
+
+
+
+// INI UNTUK SIDEBAR
+Route::get('/kegiatan', [AuthController::class, 'kegiatan'])->name('admin.kegiatan');
+Route::get('/beranda', [AuthController::class, 'beranda'])->name('admin.beranda');
+// Route::get('/galeri', [AuthController::class, 'galeri'])->name('admin.galeri');
+Route::get('/profile', [AuthController::class, 'profile'])->name('admin.profile');
+Route::get('/kebutuhanPanti', [AuthController::class, 'kebutuhanPanti'])->name('admin.kebutuhanPanti');
+Route::get('/notifikasi', [AuthController::class, 'notifikasi'])->name('admin.notifikasi');
+Route::get('/operasional', [AuthController::class, 'operasional'])->name('admin.operasional');
 
 
 
@@ -40,6 +52,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
     // Kebutuhan
     Route::resource('kebutuhan', KebutuhanController::class);
+    
 
 
 });
@@ -100,8 +113,8 @@ Route::get('/kebutuhan', [KebutuhanController::class, 'showPublic'])->name('kebu
 
 
 // INI UNTUK CADANGAN
-Route::get('/', [AuthController::class, 'index'])->name('home');
-Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
+// Route::get('/', [AuthController::class, 'index'])->name('home');
+// Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
 
 
 // CADANGAN ADMIN

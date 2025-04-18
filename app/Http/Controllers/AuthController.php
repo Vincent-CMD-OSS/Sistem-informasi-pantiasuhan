@@ -69,4 +69,30 @@ class AuthController extends Controller
     {
         return view('user.pages.pengenalan');
     }
+
+
+
+    public function kegiatan() {
+        return view('admin.pages.kegiatan');
+    }
+
+    public function beranda() {
+        return view('admin.pages.beranda');
+    }
+    
+    public function profile() {
+        return view('admin.pages.profile');
+    }
+    
+    public function notifikasi() {
+        return view('admin.pages.notifikasi');
+    }
+
+    public function kebutuhanPanti() {
+        return view('admin.pages.kebutuhanPanti');
+    }
+
+    public function operasional() {
+        return view('admin.pages.operasional');
+    }
 }
