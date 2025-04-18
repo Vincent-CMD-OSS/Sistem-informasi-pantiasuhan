@@ -22,7 +22,7 @@ Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dash
 
 
 // INI UNTUK SIDEBAR
-Route::get('/kegiatan', [AuthController::class, 'kegiatan'])->name('admin.kegiatan');
+// Route::get('/kegiatan', [AuthController::class, 'kegiatan'])->name('admin.kegiatan');
 Route::get('/beranda', [AuthController::class, 'beranda'])->name('admin.beranda');
 // Route::get('/galeri', [AuthController::class, 'galeri'])->name('admin.galeri');
 Route::get('/profile', [AuthController::class, 'profile'])->name('admin.profile');
@@ -32,13 +32,14 @@ Route::get('/operasional', [AuthController::class, 'operasional'])->name('admin.
 
 
 
-Route::prefix('admin')->middleware(['auth'])->group(function () {
+Route::prefix('admin')->middleware(['auth'])->as('admin.')->group(function () {
 
     // Dashboard
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
 
     // Kegiatan 
-    Route::resource('/kegiatan', KegiatanPantiasuhanController::class);
+    Route::resource('kegiatan', KegiatanPantiasuhanController::class);
+    // Route::resource('/kegiatan', KegiatanPantiasuhanController::class);
 
     // Jadwal
     Route::get('/jadwal', [JadwalController::class, 'index'])->name('jadwal.index');

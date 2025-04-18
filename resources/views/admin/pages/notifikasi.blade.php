@@ -8,7 +8,6 @@
     <link href="../assets/css/kebutuhan.css" rel="stylesheet">
 </head>
 <body>
-    <h1>NOTIFIKASI</h1>
     <!-- Sidebar -->
     @include('admin.partials.asidebar', ['activeMenu' => 'notifikasi'])
 

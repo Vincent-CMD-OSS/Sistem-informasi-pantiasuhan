@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Sidebar -->
-    @include('admin.partials.asidebar', ['activeMenu' => 'kegiatan'])
+    @include('admin.partials.asidebar', ['activeMenu' => 'operasional'])
 
     <!-- Main Content -->
     <div class="main-content">

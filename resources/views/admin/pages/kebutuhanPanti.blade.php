@@ -8,9 +8,8 @@
     <link href="../assets/css/kebutuhan.css" rel="stylesheet">
 </head>
 <body>
-    <h1>KEBUTUHAN</h1>
     <!-- Sidebar -->
-    @include('admin.partials.asidebar', ['activeMenu' => 'kebutuhan'])
+    @include('admin.partials.asidebar', ['activeMenu' => 'kebutuhanPanti'])
 
     <!-- Main Content -->
     <div class="main-content">

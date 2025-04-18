@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use App\Models\KegiatanPantiasuhan;
+
 
 class AuthController extends Controller
 {
@@ -73,7 +75,8 @@ class AuthController extends Controller
 
 
     public function kegiatan() {
-        return view('admin.pages.kegiatan');
+        $kegiatan = KegiatanPantiasuhan::latest()->get();
+        return view('admin.pages.kegiatan', compact('kegiatan'));
     }
 
     public function beranda() {

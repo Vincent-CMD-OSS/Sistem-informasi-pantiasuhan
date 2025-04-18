@@ -8,9 +8,8 @@
     <link href="../assets/css/kebutuhan.css" rel="stylesheet">
 </head>
 <body>
-    <h1>PROFIL</h1>
     <!-- Sidebar -->
-    @include('admin.partials.asidebar', ['activeMenu' => 'profil'])
+    @include('admin.partials.asidebar', ['activeMenu' => 'profile'])
 
     <!-- Main Content -->
     <div class="main-content">

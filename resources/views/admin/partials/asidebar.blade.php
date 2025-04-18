@@ -16,7 +16,7 @@
         <span class="menu-label">Profile</span>
     </a>
     
-    <a href="{{ route('admin.kegiatan') }}" class="menu-item {{ $activeMenu == 'kegiatan' ? 'active' : '' }}">
+    <a href="{{ route('admin.kegiatan.index') }}" class="menu-item {{ $activeMenu == 'kegiatan' ? 'active' : '' }}">
         <i class="fas fa-file-invoice"></i>
         <span class="menu-label">Galeri</span>
     </a>

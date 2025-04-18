@@ -13,7 +13,7 @@ class KegiatanPantiasuhanController extends Controller
     public function index()
     {
         $kegiatan = KegiatanPantiasuhan::latest()->get();
-        return view('admin.kegiatan.index', compact('kegiatan'));
+        return view('admin.pages.kegiatan', compact('kegiatan'));
     }
 
     /**
@@ -34,7 +34,7 @@ class KegiatanPantiasuhanController extends Controller
             'deskripsi' => 'required',
             'lokasi' => 'required',
             'tanggal_kegiatan' => 'required|date',
-            'gambar_utama' => 'required|image|mimes:jpg,png,jpeg|max:2048',
+            'gambar_utama' => 'required|image|mimes:jpg,png,jpeg',
         ]);
 
         $file = $request->file('gambar_utama');
@@ -49,7 +49,7 @@ class KegiatanPantiasuhanController extends Controller
             'gambar_utama' => 'uploads/kegiatan/' . $filename,
         ]);
 
-        return redirect()->route('kegiatan.index')->with('success', 'Kegiatan berhasil ditambahkan!');
+        return redirect()->route('admin.kegiatan.index')->with('success', 'Kegiatan berhasil ditambahkan!');
     }
     /**
      * Display the specified resource.
@@ -95,7 +95,7 @@ class KegiatanPantiasuhanController extends Controller
 
         $kegiatan->update($data);
 
-        return redirect()->route('kegiatan.index')->with('success', 'Kegiatan berhasil diupdate!');
+        return redirect()->route('admin.kegiatan.index')->with('success', 'Kegiatan berhasil diupdate!');
     }
 
     /**
@@ -109,7 +109,7 @@ class KegiatanPantiasuhanController extends Controller
         }
         $kegiatan->delete();
 
-        return redirect()->route('kegiatan.index')->with('success', 'Kegiatan berhasil dihapus!');
+        return redirect()->route('admin.kegiatan.index')->with('success', 'Kegiatan berhasil dihapus!');
     }
 
 }

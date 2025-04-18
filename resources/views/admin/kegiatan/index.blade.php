@@ -1,4 +1,4 @@
-<form action="{{ route('kegiatan.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('admin.kegiatan.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <input type="text" name="nama_kegiatan" placeholder="Nama Kegiatan" required>
     <textarea name="deskripsi" placeholder="Deskripsi" required></textarea>
@@ -11,7 +11,7 @@
 
 <h1>Daftar Kegiatan</h1>
 
-<a href="{{ route('kegiatan.create') }}">Tambah Kegiatan Baru</a>
+<!-- <a href="{{ route('admin.kegiatan.create') }}">Tambah Kegiatan Baru</a> -->
 
 <table border="1" cellpadding="10">
     <thead>
@@ -33,8 +33,8 @@
                 <td>{{ \Carbon\Carbon::parse($item->tanggal_kegiatan)->format('d M Y') }}</td>
                 <td>{{ $item->deskripsi }}</td>
                 <td>
-                    <a href="{{ route('kegiatan.edit', $item->kegiatan_id) }}">Edit</a> |
-                    <form action="{{ route('kegiatan.destroy', $item->kegiatan_id) }}" method="POST" style="display:inline;">
+                    <a href="{{ route('admin.kegiatan.edit', $item->kegiatan_id) }}">Edit</a> |
+                    <form action="{{ route('admin.kegiatan.destroy', $item->kegiatan_id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" onclick="return confirm('Yakin ingin menghapus?')">Hapus</button>
