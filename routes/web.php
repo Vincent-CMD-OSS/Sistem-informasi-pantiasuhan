@@ -54,15 +54,7 @@ Route::prefix('admin')->middleware(['auth'])->as('admin.')->group(function () {
     // Kebutuhan
     Route::resource('kebutuhan', KebutuhanController::class);
     
-
-
 });
-
-// Route::middleware(['auth'])->prefix('admin')->group(function () {
-//     Route::get('/profil', [ProfilPantiController::class, 'index'])->name('admin.profil.index');
-//     Route::post('/profil', [ProfilPantiController::class, 'store'])->name('admin.profil.store');
-// });
-
 
 
 
