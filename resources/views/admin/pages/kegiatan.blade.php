@@ -28,13 +28,54 @@
             </div> -->
 
             <div class="content-area">
-                {{-- Include daftar kegiatan --}}
-                @include('admin.kegiatan.index', ['kegiatan' => $kegiatan])
-                
-                {{-- Kalau ada mode edit --}}
-                @if (isset($editMode) && $editMode === true && isset($editKegiatan))
-                    @include('admin.kegiatan.edit', ['kegiatan' => $editKegiatan])
-                @endif
+                <button id="btnShowForm" class="btn btn-success">Tambah Galeri</button>
+
+                <!-- Daftar Kegiatan -->
+                <div id="listKegiatan">
+                    @include('admin.kegiatan.list')
+                </div>
+
+                <!-- Form Tambah Kegiatan -->
+                <div id="formTambah" style="display: none;">
+                    @include('admin.kegiatan.form')
+                </div>
+
+                <!-- Form Edit -->
+                <div id="formEdit" style="display: none;">
+                    <!-- {{-- Akan dimuat dengan AJAX --}} -->
+                </div>
+
+                <script>
+                    document.getElementById("btnShowForm").addEventListener("click", function () {
+                        document.getElementById("listKegiatan").style.display = "none";
+                        document.getElementById("formEdit").style.display = "none";
+                        document.getElementById("formTambah").style.display = "block";
+                    });
+
+                    function showEditForm(kegiatanId) {
+                        fetch(`/admin/kegiatan/${kegiatanId}/edit`)
+                            .then(response => response.text())
+                            .then(html => {
+                                document.getElementById("formEdit").innerHTML = html;
+                                document.getElementById("formTambah").style.display = "none";
+                                document.getElementById("listKegiatan").style.display = "none";
+                                document.getElementById("formEdit").style.display = "block";
+                            });
+                    }
+
+                    function backToList() {
+                        document.getElementById("formTambah").style.display = "none";
+                        document.getElementById("formEdit").style.display = "none";
+                        document.getElementById("listKegiatan").style.display = "block";
+                    }
+
+                    // document.getElementById("btnBackToList").addEventListener("click", function () {
+                    //     document.getElementById("formTambah").style.display = "none";
+                    //     document.getElementById("formEdit").style.display = "none";
+                    //     document.getElementById("listKegiatan").style.display = "block";
+                    // });
+                </script>
+
             </div>
         </div>
     </div>

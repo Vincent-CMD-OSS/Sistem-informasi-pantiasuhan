@@ -62,11 +62,17 @@ class KegiatanPantiasuhanController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+    // public function edit($id)
+    // {
+    //     $kegiatan = KegiatanPantiasuhan::findOrFail($id);
+    //     return view('admin.kegiatan.edit', compact('kegiatan'));
+    // }
     public function edit($id)
     {
         $kegiatan = KegiatanPantiasuhan::findOrFail($id);
         return view('admin.kegiatan.edit', compact('kegiatan'));
     }
+
 
 
     /**
