@@ -87,7 +87,7 @@ class KegiatanPantiasuhanController extends Controller
             'deskripsi' => 'required',
             'lokasi' => 'required',
             'tanggal_kegiatan' => 'required|date',
-            'gambar_utama' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'gambar_utama' => 'nullable|image|mimes:jpg,jpeg,png',
         ]);
 
         $data = $request->only(['nama_kegiatan', 'deskripsi', 'lokasi', 'tanggal_kegiatan']);

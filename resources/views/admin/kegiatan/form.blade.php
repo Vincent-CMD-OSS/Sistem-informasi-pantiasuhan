@@ -8,7 +8,7 @@
         
         <div class="form-group">
             <label for="nama_kegiatan">Nama Kegiatan</label>
-            <input type="text" id="nama_kegiatan" name="nama_kegiatan" class="form-control" placeholder="Panti Asuhan Hope Village" required>
+            <input type="text" id="nama_kegiatan" name="nama_kegiatan" class="form-control" placeholder="Nama galeri" required>
         </div>
         
         <div class="form-group">
@@ -47,39 +47,3 @@
     </form>
 </div>
 
-<script>
-    function previewImage(input) {
-        const preview = document.getElementById('image-preview');
-        const fileNameDisplay = document.getElementById('file-name-display');
-        
-        if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            
-            reader.onload = function(e) {
-                // Display file name
-                fileNameDisplay.textContent = input.files[0].name;
-                
-                // Show preview
-                preview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
-                
-                // Add to thumbnails
-                const thumbnailContainer = document.getElementById('thumbnail-container');
-                thumbnailContainer.innerHTML = `
-                    <div class="thumbnail-item">
-                        <img src="${e.target.result}" alt="Thumbnail">
-                        <span class="remove-thumbnail" onclick="removeThumbnail(this)">×</span>
-                    </div>
-                `;
-            }
-            
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    
-    function removeThumbnail(element) {
-        element.parentElement.remove();
-        document.getElementById('gambar_utama').value = '';
-        document.getElementById('file-name-display').textContent = '';
-        document.getElementById('image-preview').innerHTML = '';
-    }
-</script>

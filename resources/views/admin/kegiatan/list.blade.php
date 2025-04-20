@@ -1,5 +1,6 @@
 <div class="filter-container">
-    <button class="btn-tambah" id="btnShowForm">Tambah Galeri</button>
+    <!-- <button class="btn btn-success btn-tambah" id="btnShowForm">Tambah Galeri</button> -->
+    <button id="btnShowForm" class="btn btn-success btn-tambah">Tambah Galeri</button>
     <div class="filter-dropdown">
         <div class="filter-button">
             Filter: Terbaru <i class="fas fa-chevron-down"></i>

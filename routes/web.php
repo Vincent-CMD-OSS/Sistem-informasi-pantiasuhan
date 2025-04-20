@@ -42,10 +42,21 @@ Route::prefix('admin')->middleware(['auth'])->as('admin.')->group(function () {
     // Route::resource('/kegiatan', KegiatanPantiasuhanController::class);
 
     // Jadwal
-    Route::get('/jadwal', [JadwalController::class, 'index'])->name('jadwal.index');
-    Route::post('/jadwal/operasional', [JadwalController::class, 'updateOperasional'])->name('jadwal.operasional.update');
-    Route::post('/jadwal/khusus', [JadwalController::class, 'storeKhusus'])->name('jadwal.khusus.store');
-    Route::delete('/jadwal/khusus/{id}', [JadwalController::class, 'destroyKhusus'])->name('jadwal.khusus.destroy');
+    // Route::get('/jadwal', [JadwalController::class, 'index'])->name('jadwal.index');
+    // Route::post('/jadwal/operasional', [JadwalController::class, 'updateOperasional'])->name('jadwal.operasional.update');
+    // Route::post('/jadwal/khusus', [JadwalController::class, 'storeKhusus'])->name('jadwal.khusus.store');
+    // Route::delete('/jadwal/khusus/{id}', [JadwalController::class, 'destroyKhusus'])->name('jadwal.khusus.destroy');
+
+   // Jadwal & Operasional
+   Route::prefix('operasional')->group(function () {
+        Route::get('/', [JadwalController::class, 'index'])->name('operasional.index');
+        Route::post('/update', [JadwalController::class, 'updateOperasional'])->name('operasional.update');
+        Route::post('/khusus', [JadwalController::class, 'storeKhusus'])->name('operasional.khusus.store');
+        Route::delete('/khusus/{id}', [JadwalController::class, 'destroyKhusus'])->name('operasional.khusus.destroy');
+    });
+
+
+    // Route::get('/operasional', [JadwalController::class, 'index'])->name('operasional');
 
     // Profil
     Route::get('/profil', [ProfilPantiController::class, 'index'])->name('admin.profil.index');

@@ -28,7 +28,7 @@
             </div> -->
 
             <div class="content-area">
-                <button id="btnShowForm" class="btn btn-success">Tambah Galeri</button>
+                <!-- <button id="btnShowForm" class="btn btn-success">Tambah Galeri</button> -->
 
                 <!-- Daftar Kegiatan -->
                 <div id="listKegiatan">
@@ -74,6 +74,43 @@
                     //     document.getElementById("formEdit").style.display = "none";
                     //     document.getElementById("listKegiatan").style.display = "block";
                     // });
+                </script>
+
+                <script>
+                    function previewImage(input) {
+                        const preview = document.getElementById('image-preview');
+                        const fileNameDisplay = document.getElementById('file-name-display');
+                        
+                        if (input.files && input.files[0]) {
+                            const reader = new FileReader();
+                            
+                            reader.onload = function(e) {
+                                // Display file name
+                                fileNameDisplay.textContent = input.files[0].name;
+                                
+                                // Show preview
+                                preview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+                                
+                                // Add to thumbnails
+                                const thumbnailContainer = document.getElementById('thumbnail-container');
+                                thumbnailContainer.innerHTML = `
+                                    <div class="thumbnail-item">
+                                        <img src="${e.target.result}" alt="Thumbnail">
+                                        <span class="remove-thumbnail" onclick="removeThumbnail(this)">×</span>
+                                    </div>
+                                `;
+                            }
+                            
+                            reader.readAsDataURL(input.files[0]);
+                        }
+                    }
+                    
+                    function removeThumbnail(element) {
+                        element.parentElement.remove();
+                        document.getElementById('gambar_utama').value = '';
+                        document.getElementById('file-name-display').textContent = '';
+                        document.getElementById('image-preview').innerHTML = '';
+                    }
                 </script>
 
             </div>

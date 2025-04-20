@@ -8,13 +8,22 @@ use App\Models\JadwalKhusus;
 
 class JadwalController extends Controller
 {
+    // public function index()
+    // {
+    //     $jadwalOperasional = JadwalOperasional::all();
+    //     $jadwalKhusus = JadwalKhusus::orderBy('tanggal', 'asc')->get();
+
+    //     return view('admin.jadwal.index', compact('jadwalOperasional', 'jadwalKhusus'));
+    // }
+
     public function index()
     {
         $jadwalOperasional = JadwalOperasional::all();
         $jadwalKhusus = JadwalKhusus::orderBy('tanggal', 'asc')->get();
 
-        return view('admin.jadwal.index', compact('jadwalOperasional', 'jadwalKhusus'));
+        return view('admin.pages.operasional', compact('jadwalOperasional', 'jadwalKhusus'));
     }
+
 
     public function updateOperasional(Request $request)
     {

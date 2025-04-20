@@ -1,6 +1,6 @@
 <h1>Jadwal Operasional Harian</h1>
 
-<form method="POST" action="{{ route('admin.jadwal.operasional.update') }}">
+<form method="POST" action="{{ route('admin.operasional.update') }}">
     @csrf
     <table border="1">
         <tr>
@@ -32,7 +32,7 @@
 <hr>
 
 <h2>Jadwal Khusus</h2>
-<form method="POST" action="{{ route('admin.jadwal.khusus.store') }}">
+<form method="POST" action="{{ route('admin.operasional.khusus.store') }}">
     @csrf
     <input type="date" name="tanggal" required>
     <input type="time" name="jam_buka" required>
@@ -51,7 +51,7 @@
         {{ \Carbon\Carbon::parse($khusus->tanggal)->format('d M Y') }}:
         {{ $khusus->status == 'buka' ? 'Buka' : 'Tutup' }} ({{ $khusus->jam_buka }} - {{ $khusus->jam_tutup }})
         - {{ $khusus->keterangan }}
-        <form action="{{ route('admin.jadwal.khusus.destroy', $khusus->id) }}" method="POST" style="display:inline;">
+        <form action="{{ route('admin.operasional.khusus.destroy', $khusus->id) }}" method="POST" style="display:inline;">
             @csrf @method('DELETE')
             <button onclick="return confirm('Yakin hapus?')">Hapus</button>
         </form>
