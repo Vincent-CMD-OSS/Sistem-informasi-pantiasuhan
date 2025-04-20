@@ -1,6 +1,6 @@
     <h2>Edit Kebutuhan</h2>
 
-    <form action="{{ route('kebutuhan.update', $kebutuhan->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.kebutuhan.update', $kebutuhan->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 

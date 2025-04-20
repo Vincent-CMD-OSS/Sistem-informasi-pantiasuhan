@@ -1,0 +1,401 @@
+/* Kebutuhan Admin Dashboard Styles */
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.table thead {
+    background-color: #222;
+    color: white;
+}
+
+.table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.table td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Buttons */
+.btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #3e9142;
+}
+
+.btn-primary {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0c87e9;
+}
+
+.btn-secondary {
+    background-color: #757575;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #616161;
+}
+
+.btn-warning {
+    background-color: #FFC107;
+    color: #333;
+}
+
+.btn-warning:hover {
+    background-color: #e6ad00;
+}
+
+.btn-danger {
+    background-color: #F44336;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #e53935;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* Alert boxes */
+.alert {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    color: #4CAF50;
+}
+
+.alert-danger {
+    background-color: #ffebee;
+    border: 1px solid #ffcdd2;
+    color: #F44336;
+}
+
+/* Forms */
+.mb-3 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-control, .form-select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    width: 100%;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+/* Specific to kebutuhan list */
+.content-area h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* Detail button styling */
+.detail-btn {
+    color: #2196F3;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.detail-btn:hover {
+    text-decoration: underline;
+}
+
+/* Filter */
+.filter-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Tambah Kebutuhan Button */
+.tambah-kebutuhan-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.tambah-kebutuhan-btn:hover {
+    background-color: #3e9142;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.pagination .active a, .pagination a:hover {
+    background-color: #222;
+    color: white;
+}
+
+/* Table header styling to match your image */
+.kebutuhan-table-header {
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kebutuhan-table-header th {
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Image preview */
+.image-preview {
+    max-width: 150px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* Back to list button */
+.back-button {
+    background-color: #757575;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: #616161;
+}
+
+/* Status badges */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status-belum {
+    background-color: #ffebee;
+    color: #F44336;
+}
+
+.status-sebagian {
+    background-color: #fff8e1;
+    color: #FFC107;
+}
+
+.status-terpenuhi {
+    background-color: #e8f5e9;
+    color: #4CAF50;
+}
+
+/* Add kebutuhan styling */
+#btnShowForm {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Specific styling for the table in your image */
+.kebutuhan-list-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.kebutuhan-list-table th,
+.kebutuhan-list-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.kebutuhan-list-table th {
+    background-color: #222;
+    color: white;
+}
+
+.kebutuhan-list-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.kebutuhan-list-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Detail link styling to match your image */
+.detail-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.detail-link:hover {
+    text-decoration: underline;
+}
+
+/* Edit form specific styles */
+#formEdit {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#formEdit h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#formEdit div {
+    margin-bottom: 15px;
+}
+
+#formEdit input,
+#formEdit textarea,
+#formEdit select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+#formEdit button {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#formEdit button:hover {
+    background-color: #0c87e9;
+}

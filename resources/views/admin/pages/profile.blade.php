@@ -47,10 +47,7 @@
             
             <!-- Content Area - Left Empty as Requested -->
             <div class="content-area">
-                <!-- This area is intentionally left empty as requested -->
-                <p style="color: #999; text-align: center; padding-top: 180px;">
-                    This area is left empty for your custom components
-                </p>
+                @include('admin.profil.index')
             </div>
         </div>
     </div>

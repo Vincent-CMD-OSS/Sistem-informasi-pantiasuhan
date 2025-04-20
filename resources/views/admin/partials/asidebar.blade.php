@@ -21,12 +21,12 @@
         <span class="menu-label">Galeri</span>
     </a>
     
-    <a href="{{ route('admin.kebutuhanPanti') }}" class="menu-item {{ $activeMenu == 'kebutuhanPanti' ? 'active' : '' }}">
+    <a href="{{ route('admin.kebutuhan.index') }}" class="menu-item {{ $activeMenu == 'kebutuhanPanti' ? 'active' : '' }}">
         <i class="fas fa-vr-cardboard"></i>
         <span class="menu-label">Kebutuhan</span>
     </a>
     
-    <a href="{{ route('admin.operasional') }}" class="menu-item {{ $activeMenu == 'operasional' ? 'active' : '' }}">
+    <a href="{{ route('admin.operasional.index') }}" class="menu-item {{ $activeMenu == 'operasional' ? 'active' : '' }}">
         <i class="fas fa-align-right"></i>
         <span class="menu-label">Operasional</span>
     </a>

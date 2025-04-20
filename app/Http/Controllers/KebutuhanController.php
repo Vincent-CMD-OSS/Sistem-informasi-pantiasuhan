@@ -11,7 +11,7 @@ class KebutuhanController extends Controller
     public function index()
     {
         $data = Kebutuhan::orderBy('created_at', 'desc')->get();
-        return view('admin.kebutuhan.index', compact('data'));
+        return view('admin.pages.kebutuhanPanti', compact('data'));
     }
 
     public function create()
@@ -41,7 +41,7 @@ class KebutuhanController extends Controller
 
         Kebutuhan::create($data);
 
-        return redirect()->route('kebutuhan.index')->with('success', 'Kebutuhan berhasil ditambahkan!');
+        return redirect()->route('admin.kebutuhan.index')->with('success', 'Kebutuhan berhasil ditambahkan!');
     }
 
     public function edit(Kebutuhan $kebutuhan)
@@ -106,13 +106,13 @@ class KebutuhanController extends Controller
 
         $kebutuhan->update($data);
 
-        return redirect()->route('kebutuhan.index')->with('success', 'Kebutuhan berhasil diperbarui!');
+        return redirect()->route('admin.kebutuhan.index')->with('success', 'Kebutuhan berhasil diperbarui!');
     }
 
     public function destroy(Kebutuhan $kebutuhan)
     {
         $kebutuhan->delete();
-        return redirect()->route('kebutuhan.index')->with('success', 'Kebutuhan berhasil dihapus!');
+        return redirect()->route('admin.kebutuhan.index')->with('success', 'Kebutuhan berhasil dihapus!');
     }
 
     public function showPublic()

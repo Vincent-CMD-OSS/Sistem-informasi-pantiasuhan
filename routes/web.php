@@ -25,7 +25,7 @@ Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dash
 // Route::get('/kegiatan', [AuthController::class, 'kegiatan'])->name('admin.kegiatan');
 Route::get('/beranda', [AuthController::class, 'beranda'])->name('admin.beranda');
 // Route::get('/galeri', [AuthController::class, 'galeri'])->name('admin.galeri');
-Route::get('/profile', [AuthController::class, 'profile'])->name('admin.profile');
+// Route::get('/profile', [AuthController::class, 'profile'])->name('admin.profile');
 Route::get('/kebutuhanPanti', [AuthController::class, 'kebutuhanPanti'])->name('admin.kebutuhanPanti');
 Route::get('/notifikasi', [AuthController::class, 'notifikasi'])->name('admin.notifikasi');
 Route::get('/operasional', [AuthController::class, 'operasional'])->name('admin.operasional');
@@ -59,8 +59,10 @@ Route::prefix('admin')->middleware(['auth'])->as('admin.')->group(function () {
     // Route::get('/operasional', [JadwalController::class, 'index'])->name('operasional');
 
     // Profil
-    Route::get('/profil', [ProfilPantiController::class, 'index'])->name('admin.profil.index');
-    Route::post('/profil', [ProfilPantiController::class, 'store'])->name('admin.profil.store');
+    Route::get('/profil', [ProfilPantiController::class, 'index'])->name('profil.index');
+    Route::post('/profil', [ProfilPantiController::class, 'store'])->name('profil.store');
+
+    Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
 
     // Kebutuhan
     Route::resource('kebutuhan', KebutuhanController::class);

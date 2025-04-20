@@ -6,6 +6,7 @@
     <title>Admin Dashboard - Kebutuhan</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="../assets/css/kebutuhan.css" rel="stylesheet">
+    <link href="../assets/css/kebutuhanPanti.css" rel="stylesheet">
 </head>
 <body>
     <!-- Sidebar -->
@@ -42,16 +43,60 @@
         <div class="content-container">
             <!-- Content Header -->
             <div class="content-header">
-                <h2>Daftar Kegiatan</h2>
+                <h2>Daftar Kebutuhan</h2>
             </div>
             
             <!-- Content Area - Left Empty as Requested -->
+
             <div class="content-area">
-                <!-- This area is intentionally left empty as requested -->
-                <p style="color: #999; text-align: center; padding-top: 180px;">
-                    This area is left empty for your custom components
-                </p>
+                <button id="btnShowForm" class="btn btn-success mb-3">Tambah Kebutuhan</button>
+
+                <!-- List -->
+                <div id="listKebutuhan">
+                    @include('admin.kebutuhan.index')
+                </div>
+
+                <!-- Form Tambah -->
+                <div id="formTambah" style="display: none;">
+                    @include('admin.kebutuhan.create')
+                </div>
+
+                <!-- Form Edit -->
+                <div id="formEdit" style="display: none;">
+                    <!-- AKAN DIMUAT OLEH AJAX -->
+                </div>
+
+                <!-- Form Edit (akan dimuat lewat AJAX) -->
+                <div id="formEdit" style="display: none;"></div>
+
+                <script>
+                    document.getElementById("btnShowForm").addEventListener("click", function () {
+                        document.getElementById("listKebutuhan").style.display = "none";
+                        document.getElementById("formEdit").style.display = "none";
+                        document.getElementById("formTambah").style.display = "block";
+                    });
+
+                    function showEditForm(id) {
+                        fetch(`/admin/kebutuhan/${id}/edit`)
+                            .then(res => res.text())
+                            .then(html => {
+                                document.getElementById("formEdit").innerHTML = html;
+                                document.getElementById("formTambah").style.display = "none";
+                                document.getElementById("listKebutuhan").style.display = "none";
+                                document.getElementById("formEdit").style.display = "block";
+                            });
+                    }
+
+                    function backToList() {
+                        document.getElementById("formTambah").style.display = "none";
+                        document.getElementById("formEdit").style.display = "none";
+                        document.getElementById("listKebutuhan").style.display = "block";
+                    }
+                </script>
+
             </div>
+
+
         </div>
     </div>
 </body>

@@ -1,6 +1,6 @@
 <div class="container mt-4">
     <h2>Daftar Kebutuhan</h2>
-    <a href="{{ route('kebutuhan.create') }}" class="btn btn-success mb-3">Tambah Kebutuhan</a>
+    <!-- <a href="{{ route('admin.kebutuhan.create') }}" class="btn btn-success mb-3">Tambah Kebutuhan</a> -->
 
     @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
@@ -22,8 +22,11 @@
                     <td>{{ $item->kategori }}</td>
                     <td>{{ $item->status }}</td>
                     <td>
-                        <a href="{{ route('kebutuhan.edit', $item->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                        <form action="{{ route('kebutuhan.destroy', $item->id) }}" method="POST" style="display:inline">
+                        <!-- <a href="{{ route('admin.kebutuhan.edit', $item->id) }}" class="btn btn-sm btn-warning">Edit</a> -->
+                         
+                        <button onclick="showEditForm('{{ $item->id }}')" class="btn btn-warning">Edit</button>
+
+                        <form action="{{ route('admin.kebutuhan.destroy', $item->id) }}" method="POST" style="display:inline">
                             @csrf @method('DELETE')
                             <button onclick="return confirm('Hapus data ini?')" class="btn btn-sm btn-danger">Hapus</button>
                         </form>
