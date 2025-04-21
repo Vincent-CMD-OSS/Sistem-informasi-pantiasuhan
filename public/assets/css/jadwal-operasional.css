@@ -1,0 +1,194 @@
+/* Jadwal Operasional Styles */
+
+.jadwal-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.jadwal-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background-color: #b8e2fa;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    z-index: -1;
+}
+
+.jadwal-wrapper {
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Left Content */
+.jadwal-header {
+    margin-bottom: 40px;
+}
+
+.jadwal-header .subtitle {
+    display: block;
+    color: #6e7c90;
+    font-size: 16px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.jadwal-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #1a2942;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.jadwal-items {
+    margin-top: 30px;
+}
+
+.jadwal-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.icon-box i {
+    font-size: 24px;
+    color: white;
+}
+
+.yellow-bg {
+    background-color: #FFD166;
+}
+
+.orange-bg {
+    background-color: #F07167;
+}
+
+.blue-bg {
+    background-color: #118AB2;
+}
+
+.jadwal-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a2942;
+    margin-bottom: 8px;
+}
+
+.jadwal-text p {
+    color: #6e7c90;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Right Image */
+.jadwal-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jadwal-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 15px;
+}
+
+.jadwal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.jadwal-image-caption {
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.jadwal-image-caption h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a2942;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .jadwal-section:before {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .jadwal-content {
+        margin-bottom: 40px;
+    }
+    
+    .jadwal-title {
+        font-size: 32px;
+    }
+    
+    .jadwal-image-wrapper {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .jadwal-title {
+        font-size: 28px;
+    }
+    
+    .icon-box {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+    }
+    
+    .icon-box i {
+        font-size: 20px;
+    }
+    
+    .jadwal-text h4 {
+        font-size: 17px;
+    }
+    
+    .jadwal-text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .jadwal-item {
+        flex-direction: column;
+    }
+    
+    .icon-box {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    
+    .jadwal-text {
+        padding-left: 10px;
+    }
+}

@@ -3,13 +3,13 @@
 use Illuminate\Support\Facades\Route;
 // use Illuminate\Container\Attributes\Auth;
 
-
 // use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KegiatanPantiasuhanController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\ProfilPantiController;
 use App\Http\Controllers\KebutuhanController;
+use App\Http\Controllers\DonasiController;
 
 
 
@@ -68,6 +68,16 @@ Route::prefix('admin')->middleware(['auth'])->as('admin.')->group(function () {
 
     // Kebutuhan
     Route::resource('kebutuhan', KebutuhanController::class);
+
+
+
+ 
+    Route::get('/donasi', [DonasiController::class, 'index'])->name('donasi.index');
+    Route::get('/donasi/create', [DonasiController::class, 'create'])->name('donasi.create');
+    Route::post('/donasi', [DonasiController::class, 'store'])->name('donasi.store');
+    Route::delete('/donasi/{id}', [DonasiController::class, 'destroy'])->name('donasi.destroy');
+
+
     
 });
 
@@ -100,6 +110,13 @@ Route::get('/kebutuhan', [KebutuhanController::class, 'showPublic'])->name('kebu
 
 
 
+Route::get('/galeri', [KegiatanPantiasuhanController::class, 'galeri'])->name('galeri');
+
+// Route::get('/jadwalOperasional', [JadwalController::class, 'jadwalOperasional'])->name('jadwalOperasional');
+
+
+Route::get('/', [AuthController::class, 'index'])->name('home');
+Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
 
 
 
@@ -120,11 +137,6 @@ Route::get('/kebutuhan', [KebutuhanController::class, 'showPublic'])->name('kebu
 
 // CADANGAN LOGIN
 // Route::post('/login', [AuthController::class, 'login'])->name('admin.login');
-
-
-// INI UNTUK CADANGAN
-Route::get('/', [AuthController::class, 'index'])->name('home');
-Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
 
 
 // CADANGAN ADMIN

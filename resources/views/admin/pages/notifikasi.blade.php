@@ -13,6 +13,7 @@
 
     <!-- Main Content -->
     <div class="main-content">
+        @include('admin.partials.topbar')
         
         <div class="content-container">
             <!-- Content Header -->
@@ -23,9 +24,31 @@
             <!-- Content Area - Left Empty as Requested -->
             <div class="content-area">
                 <!-- This area is intentionally left empty as requested -->
-                <p style="color: #999; text-align: center; padding-top: 180px;">
-                    Diisi dengan konten
-                </p>
+                <div id="listDonasi" style="display: block;">
+                @include('admin.donasi.index', ['donasi' => \App\Models\Donasi::all()])
+                </div>
+
+                <div id="formEdit" style="display: none;">
+                    <!-- {{-- Akan dimuat dengan AJAX --}} -->
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        // Tombol Tambah
+                        document.getElementById("tambah-btn").addEventListener("click", function () {
+                            fetch("{{ route('admin.donasi.create') }}")
+                                .then(response => response.text())
+                                .then(html => {
+                                    document.getElementById("formEdit").innerHTML = html;
+                                    document.getElementById("formEdit").style.display = "block";
+                                    document.getElementById("listDonasi").style.display = "none";
+                                });
+                        });
+
+                        // (Tambahkan logika edit juga kalau sudah siap)
+                    });
+                </script>
+
             </div>
         </div>
     </div>

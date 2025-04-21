@@ -37,9 +37,12 @@
     <meta name="description" content="Free HTML Template">
 
 
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jadwal-operasional.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/icomoon/icomoon.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/galeri.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+	
 
 
 
@@ -179,7 +182,8 @@
 
 	<!-- INI UNTUK BAGIAN PORTOFOLIO -->
 
-	{{-- @include('user.partials.portofolio') --}}
+	<!-- {{-- @include('user.partials.portofolio') --}} -->
+	@include('user.partials.galeri')
 
 	<!-- INI AKHIR BAGIAN PORTOFOLIO -->
 
@@ -217,6 +221,8 @@
 </section>
 
 
+@include('user.partials.jadwalOperasional')
+
 
 <!-- INI BAGIAN Sejarah -->
 <section id="sejarah" class="padding-large">
@@ -250,84 +256,6 @@
 	</div><!--container-->
 </section>
 <!-- INI AKHIR BAGIAN SEJARAH -->
-
-
-
-
-<!-- INI BAGIAN SERVICE -->
-	<!-- <section id="services" class="scrollspy-section padding-large">
-		<div class="container">
-			<div class="row">
-				<div class="section-header col-12">
-					<div class="title">
-						<span>what we do</span>
-					</div>
-					<h2 class="section-title">Services</h2>
-				</div>
-
-			</div>
-
-			<div class="row">
-
-				<div class="col-md-4">
-					<div class="services-item">
-						<span class="number">01</span>
-						<h3>Architecture Portfolio</h3>
-						<p>Lectus molestie id enim ipsum. Netus sed cursus nibh iaculis ipsum turpis nulla blandit dui.
-						</p>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="services-item">
-						<span class="number">02</span>
-						<h3>Planning Process</h3>
-						<p>Lectus molestie id enim ipsum. Netus sed cursus nibh iaculis ipsum turpis nulla blandit dui.
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-4">
-					<div class="services-item">
-						<span class="number">03</span>
-						<h3>Unique Design</h3>
-						<p>Lectus molestie id enim ipsum. Netus sed cursus nibh iaculis ipsum turpis nulla blandit dui.
-						</p>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</section> -->
-	<!-- INI AKHIR BAGIAN SERVICE -->
-
-
-	<!-- INI BAGIAN SUBSCRIBE -->
-	<!-- <section id="subscribe" class="scrollspy-section padding-small">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<figure class="subscribe-image">
-						<img src="images/subscribe-image.png" alt="subscribe">
-					</figure>
-				</div>
-				<div class="col-md-6">
-					<div class="subscribe-content">
-						<h2 class="section-title">subscribe us</h2>
-						<p>Join our newsletter to stay updated with super discounts and amazing offers. 300+ have
-							already subscribed us.</p>
-						<form id="form">
-							<input type="text" name="email" placeholder="enter your email address">
-							<button class="btn btn-accent btn-rounded btn-full btn-xlarge">Subscribe</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- INI AKHIR BAGIAN SUBSCRIBE -->
 
 	
 
