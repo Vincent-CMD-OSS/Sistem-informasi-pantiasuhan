@@ -1,109 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stories of Hope</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles */
-        .stories-container {
-            display: flex;
-            gap: 20px;
-        }
-        .main-image {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .small-image {
-            width: 100%;
-            height: 100px;
-            background-color: #f0f0f0;
-            border-radius: 10px;
-        }
-        .image-text {
-            margin-top: 10px;
-        }
-        .section-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .description {
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-
-    <section id="stories-of-hope" class="bg-light p-5">
-        <div class="container">
-            <h1 class="text-center mb-5">STORIES OF HOPE</h1>
-            <div class="stories-container">
-                <!-- Kolom Kiri -->
-                <div class="col-lg-6">
-                    <img src="images/main-story.jpg" alt="Main Story Image" class="main-image img-fluid mb-3 rounded">
-                    <h2 class="section-title">Ini judul dari stories of hope yang pertama</h2>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+<!-- INI UNTUK BAGIAN GALERI DIGITAL -->
+<section id="galeri" class="scrollspy-section padding-large bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center mb-5">
+                    <div class="title">
+                        <span>dokumentasi kegiatan</span>
+                    </div>
+                    <h2 class="section-title">Galeri Digital</h2>
+                    <p class="mt-4 galeri-subtitle">
+                        Ikuti berbagai kegiatan, pencapaian, dan momen inspiratif dari anak-anak dan keluarga
+                        besar Rumah Harapan dalam membangun masa depan yang lebih baik.
                     </p>
                 </div>
+            </div>
+        </div>
 
-                <!-- Kolom Kanan -->
-                <div class="col-lg-6">
-                    <div class="row g-3">
-                        <!-- Kotak 1 -->
-                        <div class="col-12">
-                            <div class="small-image"></div>
-                            <div class="image-text">
-                                <h3 class="section-title">Ini judul dari stories of hope yang pertama</h3>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.
-                                </p>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="galeri-item mb-5">
+                    <figure class="galeri-image">
+                        <img src="{{ asset('assets/images/gallery/media-team.jpg') }}" alt="Hope Village Media Team" class="img-fluid rounded shadow">
+                        <div class="date-badge">
+                            <span>dd/mm/yyyy</span>
+                        </div>
+                    </figure>
+                    <div class="galeri-content mt-4">
+                        <h3>Hope Village Media Team</h3>
+                        <p>Hope Village di pedesaan Sumatra telah menyaksikan munculnya pendongeng muda. 
+                        Melalui fotografi dan film, mereka berbagi kisah keluarga Hope Village.</p>
+                        <a href="#" class="btn-with-line mt-3">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <div class="galeri-item-small d-flex">
+                            <figure class="galeri-image-small me-4">
+                                <img src="{{ asset('assets/images/gallery/roy-lena.jpg') }}" alt="Roy & Lena" class="img-fluid rounded shadow">
+                                <div class="date-badge-small">
+                                    <span>dd/mm/yyyy</span>
+                                </div>
+                            </figure>
+                            <div class="galeri-content-small">
+                                <h4>Roy & Lena</h4>
+                                <p>Temukan perjalanan transformatif Roy dan Lena di Hope Village, tempat mereka...</p>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Kotak 2 -->
-                        <div class="col-12">
-                            <div class="small-image"></div>
-                            <div class="image-text">
-                                <h3 class="section-title">Ini judul dari stories of hope yang pertama</h3>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.
-                                </p>
+                    <div class="col-12 mb-4">
+                        <div class="galeri-item-small d-flex">
+                            <figure class="galeri-image-small me-4">
+                                <img src="{{ asset('assets/images/gallery/buenga-novi-joel.jpg') }}" alt="Kisah Buenga, Novi & Joel" class="img-fluid rounded shadow">
+                                <div class="date-badge-small">
+                                    <span>dd/mm/yyyy</span>
+                                </div>
+                            </figure>
+                            <div class="galeri-content-small">
+                                <h4>Kisah Buenga, Novi & Joel</h4>
+                                <p>A heartbreaking beginning led to an inspiring transformation. Meet Buenga, Novi...</p>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Kotak 3 -->
-                        <div class="col-12">
-                            <div class="small-image"></div>
-                            <div class="image-text">
-                                <h3 class="section-title">Ini judul dari stories of hope yang pertama</h3>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Kotak 4 -->
-                        <div class="col-12">
-                            <div class="small-image"></div>
-                            <div class="image-text">
-                                <h3 class="section-title">Ini judul dari stories of hope yang pertama</h3>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.
-                                </p>
+                    <div class="col-12">
+                        <div class="galeri-item-small d-flex">
+                            <figure class="galeri-image-small me-4">
+                                <img src="{{ asset('assets/images/gallery/anung.jpg') }}" alt="Anung" class="img-fluid rounded shadow">
+                                <div class="date-badge-small">
+                                    <span>dd/mm/yyyy</span>
+                                </div>
+                            </figure>
+                            <div class="galeri-content-small">
+                                <h4>Anung</h4>
+                                <p>Bertemu dengan Anung, yang pada usia 10 tahun, tiba di Hope Village bersama adik laki-laki...</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <a href="{{ route('galeri') }}" class="btn btn-accent btn-xlarge btn-rounded">Lihat Semua Galeri</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- INI AKHIR BAGIAN GALERI DIGITAL -->

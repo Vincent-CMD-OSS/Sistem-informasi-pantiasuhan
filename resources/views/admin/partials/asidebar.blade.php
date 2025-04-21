@@ -33,7 +33,7 @@
     
     <a href="{{ route('admin.notifikasi') }}" class="menu-item {{ $activeMenu == 'notifikasi' ? 'active' : '' }}">
         <i class="fas fa-bell"></i>
-        <span class="menu-label">Notifikasi</span>
+        <span class="menu-label">Donasi</span>
     </a>
     
     <div class="menu-divider">ACCOUNT PAGES</div>
