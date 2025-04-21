@@ -86,6 +86,10 @@ Route::get('/pengenalan', function () {
     return view('user.pages.pengenalan');
 })->name('pengenalan');
 
+Route::get('/kegiatanpanti', function () {
+    return view('user.pages.kegiatanpanti');
+})->name('kegiatanpanti');
+
 
 Route::get('/galeri', function () {
     $kegiatan = App\Models\KegiatanPantiasuhan::latest()->get();
