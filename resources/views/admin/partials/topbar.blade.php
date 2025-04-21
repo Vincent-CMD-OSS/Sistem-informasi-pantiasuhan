@@ -6,19 +6,19 @@
             </div>
             
             <div class="top-bar-actions">
-                <input type="text" class="search-bar" placeholder="Type here...">
-                <button class="action-btn">Online Builder</button>
-                <button class="icon-btn">
+                <!-- <input type="text" class="search-bar" placeholder="Type here..."> -->
+                <!-- <button class="action-btn">Online Builder</button> -->
+                <!-- <button class="icon-btn">
                     <i class="fas fa-star"></i>
-                </button>
-                <button class="icon-btn">
+                </button> -->
+                <!-- <button class="icon-btn">
                     <i class="fas fa-cog"></i>
-                </button>
+                </button> -->
                 <button class="icon-btn">
                     <i class="fas fa-bell"></i>
                 </button>
-                <button class="icon-btn">
+                <!-- <button class="icon-btn">
                     <i class="fas fa-user-circle"></i>
-                </button>
+                </button> -->
             </div>
         </div>

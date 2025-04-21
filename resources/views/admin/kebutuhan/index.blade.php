@@ -31,6 +31,10 @@
                             <button onclick="return confirm('Hapus data ini?')" class="btn btn-sm btn-danger">Hapus</button>
                         </form>
                     </td>
+                    <td>
+                        <button onclick="showDetail('{{ $item->id }}')" class="btn btn-info">Detail</button>
+                    </td>
+
                 </tr>
             @endforeach
         </tbody>

@@ -3,7 +3,7 @@
         <div class="logo">
             <i class="fas fa-cube"></i>
         </div>
-        <div class="logo-text">Your Logo</div>
+        <div class="logo-text">Our Logo</div>
     </div>
     
     <a href="{{ route('admin.beranda') }}" class="menu-item {{ $activeMenu == 'beranda' ? 'active' : '' }}">
@@ -39,11 +39,11 @@
     <div class="menu-divider">ACCOUNT PAGES</div>
     
     <div class="footer">
-        <a href="#" class="docs-button">
+        <!-- <a href="#" class="docs-button">
             Documentation
-        </a>
+        </a> -->
         <a href="#" class="action-button">
-            Upgrade to pro
+            Log Out
         </a>
     </div>
 </div>

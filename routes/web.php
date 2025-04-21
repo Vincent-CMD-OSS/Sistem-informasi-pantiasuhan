@@ -13,17 +13,17 @@ use App\Http\Controllers\KebutuhanController;
 
 
 
-Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
+// Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('admin.login.submit');
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('admin.register');
-Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
+// Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
 
 
 
 
 // INI UNTUK SIDEBAR
 // Route::get('/kegiatan', [AuthController::class, 'kegiatan'])->name('admin.kegiatan');
-Route::get('/beranda', [AuthController::class, 'beranda'])->name('admin.beranda');
+// Route::get('/beranda', [AuthController::class, 'beranda'])->name('admin.beranda');
 // Route::get('/galeri', [AuthController::class, 'galeri'])->name('admin.galeri');
 // Route::get('/profile', [AuthController::class, 'profile'])->name('admin.profile');
 Route::get('/kebutuhanPanti', [AuthController::class, 'kebutuhanPanti'])->name('admin.kebutuhanPanti');
@@ -33,6 +33,8 @@ Route::get('/operasional', [AuthController::class, 'operasional'])->name('admin.
 
 
 Route::prefix('admin')->middleware(['auth'])->as('admin.')->group(function () {
+    // Beranda
+    Route::get('/beranda', [AuthController::class, 'beranda'])->name('beranda');
 
     // Dashboard
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
@@ -103,7 +105,9 @@ Route::get('/kebutuhan', [KebutuhanController::class, 'showPublic'])->name('kebu
 
 // Ini Routes
 
-
+// Route::get('/beranda', function () {
+//     return view('user/pages/index');
+// })->name('index');
 
 
 
@@ -119,8 +123,8 @@ Route::get('/kebutuhan', [KebutuhanController::class, 'showPublic'])->name('kebu
 
 
 // INI UNTUK CADANGAN
-// Route::get('/', [AuthController::class, 'index'])->name('home');
-// Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
+Route::get('/', [AuthController::class, 'index'])->name('home');
+Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
 
 
 // CADANGAN ADMIN

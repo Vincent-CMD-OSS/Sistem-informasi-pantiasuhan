@@ -120,4 +120,10 @@ class KebutuhanController extends Controller
         $kebutuhan = Kebutuhan::orderBy('created_at', 'desc')->get();
         return view('public.kebutuhan.index', compact('kebutuhan'));
     }
+
+    public function show(Kebutuhan $kebutuhan)
+    {
+        return view('admin.kebutuhan.show', compact('kebutuhan'));
+    }
+
 }

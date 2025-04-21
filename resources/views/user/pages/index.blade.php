@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="in">
 
 <!-- <head>
 	<title>Archi - Free Architecture Portfolio HTML Template</title>
