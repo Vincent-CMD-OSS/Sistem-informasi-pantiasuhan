@@ -37,9 +37,12 @@
     <meta name="description" content="Free HTML Template">
 
 
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jadwal-operasional.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/icomoon/icomoon.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/galeri.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+	
 
 
 
@@ -179,7 +182,8 @@
 
 	<!-- INI UNTUK BAGIAN PORTOFOLIO -->
 
-	{{-- @include('user.partials.portofolio') --}}
+	<!-- {{-- @include('user.partials.portofolio') --}} -->
+	@include('user.partials.galeri')
 
 	<!-- INI AKHIR BAGIAN PORTOFOLIO -->
 
@@ -217,6 +221,8 @@
 </section>
 
 
+@include('user.partials.jadwalOperasional')
+
 
 <!-- INI BAGIAN Sejarah -->
 <section id="sejarah" class="padding-large">
@@ -250,6 +256,7 @@
 	</div><!--container-->
 </section>
 <!-- INI AKHIR BAGIAN SEJARAH -->
+
 
 
 <!-- INI BAGIAN KEGIATAN -->
