@@ -41,9 +41,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/icomoon/icomoon.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/galeri.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/donasi.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 	
+
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -87,9 +87,9 @@
 				<img src="assets/images/gambar11.jpg" alt="banner" class="jarallax-img">
 				<div class="banner-content">
 					<h2 class="banner-title txt-fx">Children Flourishing</h2>
-					<div class="btn-wrap">
-						<!-- <a href="#" class="btn-with-line">View Project</a> -->
-					</div>
+					<!-- <div class="btn-wrap">
+						<a href="#" class="btn-with-line">View Project</a>
+					</div> -->
 				</div><!--banner-content-->
 			</div><!--slider-item-->
 
@@ -375,7 +375,7 @@
 
 	
 
-	<!-- <section id="latest-blog" class="scrollspy-section bg-grey padding-large">
+	<section id="latest-blog" class="scrollspy-section bg-grey padding-large">
 		<div class="container">
 
 			<div class="row">
@@ -474,9 +474,7 @@
 			</div>
 
 		</div>
-	</section> -->
-
-	@include('user.partials.donasi')
+	</section>
 
 
 	<!-- INI BAGIAN CONTACT -->
