@@ -124,39 +124,3 @@ Route::get('/organisation', [AuthController::class, 'organisation'])->name('orga
 
 
 
-// Ini Routes
-
-// Route::get('/beranda', function () {
-//     return view('user/pages/index');
-// })->name('index');
-
-
-
-
-
-// CADANGAN JADWAL
-// Route::get('/jadwal', [\App\Http\Controllers\JadwalController::class, 'jadwalPublik'])->name('jadwal.publik');
-
-
-
-// CADANGAN LOGIN
-// Route::post('/login', [AuthController::class, 'login'])->name('admin.login');
-
-
-// CADANGAN ADMIN
-// Route::prefix('admin')->middleware(['auth'])->group(function () {
-//     Route::get('/jadwal', [JadwalController::class, 'index'])->name('jadwal.index');
-//     Route::post('/jadwal/operasional', [JadwalController::class, 'updateOperasional'])->name('jadwal.operasional.update');
-//     Route::post('/jadwal/khusus', [JadwalController::class, 'storeKhusus'])->name('jadwal.khusus.store');
-//     Route::delete('/jadwal/khusus/{id}', [JadwalController::class, 'destroyKhusus'])->name('jadwal.khusus.destroy');
-// });
-
-
-
-// CADANGAN LAINNYA
-// Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard')->middleware('auth');
-
-// Group route admin (harus login)
-// Route::middleware(['auth'])->group(function () {
-//     Route::resource('admin/kegiatan', App\Http\Controllers\KegiatanPantiasuhanController::class);
-// });
