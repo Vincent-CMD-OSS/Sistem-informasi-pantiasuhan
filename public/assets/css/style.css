@@ -2036,9 +2036,15 @@ body.nav-active .nav__block .nav__block-item {
 
 #intro .button-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  padding: 0 30px;
+  pointer-events: none; /* agar slide di belakang tetap bisa diakses saat klik */
 }
 
 #intro .button-container button.slick-arrow {
@@ -2049,6 +2055,11 @@ body.nav-active .nav__block .nav__block-item {
   background: var(--dark-color);
   padding: 20px;
   margin: 0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto; /* aktifkan pointer event untuk tombol */
+  transition: background 0.3s ease;
 }
 
 #intro .button-container button.slick-arrow:hover,
@@ -2056,6 +2067,7 @@ body.nav-active .nav__block .nav__block-item {
   background: var(--accent-color);
   outline: none;
 }
+
 
 @media only screen and (max-width: 1600px) {
   .main-slider .banner-content .btn-wrap {

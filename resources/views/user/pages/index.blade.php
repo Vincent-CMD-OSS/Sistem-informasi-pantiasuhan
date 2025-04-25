@@ -112,7 +112,9 @@
 					</div>
 				</div><!--banner-content-->
 			</div><!--slider-item-->
-		</div><!--slider-->
+		</div>
+		
+		<!--slider-->
 
 		<div class="button-container">
 			<button class="prev slick-arrow">
