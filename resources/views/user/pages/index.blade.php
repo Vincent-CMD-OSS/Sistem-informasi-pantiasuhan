@@ -97,9 +97,9 @@
 				<img src="assets/images/Gambar12.jpg" alt="banner" class="jarallax-img">
 				<div class="banner-content">
 					<h2 class="banner-title txt-fx">Walking In Purpose</h2>
-					<div class="btn-wrap">
+					<!-- <div class="btn-wrap">
 						<a href="#" class="btn-with-line">View Project</a>
-					</div>
+					</div> -->
 				</div><!--banner-content-->
 			</div><!--slider-item-->
 
@@ -107,9 +107,9 @@
 				<img src="assets/images/Gambar13.jpg" alt="banner" class="jarallax-img">
 				<div class="banner-content">
 					<h2 class="banner-title txt-fx">Filled With Hope</h2>
-					<div class="btn-wrap">
+					<!-- <div class="btn-wrap">
 						<a href="#" class="btn-with-line">View Project</a>
-					</div>
+					</div> -->
 				</div><!--banner-content-->
 			</div><!--slider-item-->
 		</div>
