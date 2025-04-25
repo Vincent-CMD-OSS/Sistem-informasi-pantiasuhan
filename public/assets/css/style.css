@@ -2056,7 +2056,7 @@ body.nav-active .nav__block .nav__block-item {
   padding: 20px;
   margin: 0;
   border: none;
-  border-radius: 50%;
+  border-radius: 5%;
   cursor: pointer;
   pointer-events: auto; /* aktifkan pointer event untuk tombol */
   transition: background 0.3s ease;
