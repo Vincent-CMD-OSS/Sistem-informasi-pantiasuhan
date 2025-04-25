@@ -41,9 +41,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/icomoon/icomoon.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/galeri.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/donasi.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 	
-
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -375,7 +375,7 @@
 
 	
 
-	<section id="latest-blog" class="scrollspy-section bg-grey padding-large">
+	<!-- <section id="latest-blog" class="scrollspy-section bg-grey padding-large">
 		<div class="container">
 
 			<div class="row">
@@ -474,7 +474,9 @@
 			</div>
 
 		</div>
-	</section>
+	</section> -->
+
+	@include('user.partials.donasi')
 
 
 	<!-- INI BAGIAN CONTACT -->
