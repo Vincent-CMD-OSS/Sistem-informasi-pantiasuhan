@@ -88,7 +88,7 @@
 				<div class="banner-content">
 					<h2 class="banner-title txt-fx">Children Flourishing</h2>
 					<div class="btn-wrap">
-						<a href="#" class="btn-with-line">View Project</a>
+						<!-- <a href="#" class="btn-with-line">View Project</a> -->
 					</div>
 				</div><!--banner-content-->
 			</div><!--slider-item-->
