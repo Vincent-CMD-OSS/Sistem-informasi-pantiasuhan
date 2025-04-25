@@ -70,9 +70,9 @@
 
 
 	<!-- INI BAGIAN HERO -->
-	<div class="main-logo">
+	<!-- <div class="main-logo">
 		<a href="index.html">A.</a>
-	</div>
+	</div> -->
 
 	<div class="side-nav-bar">
 		<input id="menu-toggle" type="checkbox" />
