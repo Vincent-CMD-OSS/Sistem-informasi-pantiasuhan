@@ -196,7 +196,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<figure class="jarallax-keep-img pengenalan-image" data-speed="0.5">
+				<figure class="jarallax-keep-img pengenalan-image" data-speed="0.5" style="height: 100%; max-height: 500px; overflow: hidden;">
 					<img src="https://hopevillage.org.au/images/splits/crops/image.48fe7ca8.hope_village_aerial_shot_of_high_school_1.jpg" alt="Pengenalan Panti Asuhan" class="jarallax-img">
 				</figure>
 			</div>
@@ -209,9 +209,9 @@
 						<h2 class="section-title">Panti Asuhan Rumah Harapan</h2>
 					</div>
 					<div class="pengenalan-content">
-						<p>
+						<p class="card-text" style="text-align: justify;">
 							Panti Asuhan Rumah Harapan merupakan lembaga yang menyediakan lingkungan penuh kasih untuk anak-anak yang membutuhkan. Di sini, setiap anak mendapatkan kesempatan untuk tumbuh dan berkembang melalui berbagai program pendidikan, kesehatan, dan pembinaan karakter. Kami berkomitmen untuk menyediakan fasilitas terbaik dan suasana yang mendukung agar setiap anak dapat meraih potensi maksimalnya. Untuk informasi lebih lanjut mengenai fitur dan fasilitas yang tersedia, silakan kunjungi halaman khusus kami.
-						</p>
+						</>
 					</div>
 					<div class="btn-wrap">
 						<a href="{{ route('pengenalan') }}"class="btn btn-accent btn-xmedium btn-rounded">More Information</a>
@@ -231,7 +231,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<figure class="jarallax-keep-img sejarah-image" data-speed="0.5">
+				<figure class="jarallax-keep-img sejarah-image" data-speed="0.5" style="height: 100%; max-height: 500px; overflow: hidden;">
 					<img src="https://hopevillage.org.au/images/content/crops/image.0c45ed53.hope_village_family.jpg" alt="sejarah panti" class="jarallax-img">
 				</figure>
 			</div>
@@ -244,7 +244,7 @@
 						<h2 class="section-title">Panti Asuhan Rumah Harapan</h2>
 					</div>
 					<div class="pengenalan-content">
-					<p>
+					<p class="card-text" style="text-align: justify;">  
    					 Panti Asuhan Rumah Harapan didirikan pada awal tahun dengan inisiatif sekelompok relawan yang peduli terhadap nasib anak-anak kurang mampu. Berawal dari sebuah ide sederhana untuk menyediakan tempat perlindungan yang hangat dan penuh kasih, lembaga ini kemudian berkembang berkat dukungan masyarakat dan donatur yang setia. Seiring berjalannya waktu, Rumah Harapan tidak hanya menjadi rumah bagi anak-anak yang membutuhkan, tetapi juga menjadi pusat pendidikan dan pengembangan karakter, menginspirasi banyak pihak melalui dedikasinya dalam menciptakan masa depan yang lebih cerah. Perjalanan sejarah ini mencerminkan komitmen dan semangat untuk terus melayani serta memberdayakan setiap anak yang bergabung dalam keluarga besar Rumah Harapan.
 					</p>
 					</div>
@@ -266,7 +266,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<figure class="jarallax-keep-img kegiatan-image" data-speed="0.5">
+				<figure class="jarallax-keep-img kegiatan-image" data-speed="0.5" style="height: 100%; max-height: 500px; overflow: hidden;">
 					<img src="https://hopevillage.org.au/images/cache/content/hope-village-children-lining-up-for-school-1.05ae2122.jpg" alt="kegiatan panti" class="jarallax-img">
 				</figure>
 			</div>
@@ -279,7 +279,7 @@
 						<h2 class="section-title">Panti Asuhan Rumah Harapan</h2>
 					</div>
 					<div class="kegiatan-content">
-					<p>
+					<p class="card-text" style="text-align: justify;">
 						Panti Asuhan Rumah Harapan menyelenggarakan berbagai kegiatan rutin yang bertujuan untuk mendukung tumbuh kembang anak-anak secara holistik. Kegiatan harian meliputi pembelajaran akademik, pelatihan keterampilan hidup, dan bimbingan karakter. Anak-anak juga mengikuti kegiatan ibadah, olahraga pagi, dan pengembangan seni seperti musik dan tari. 
 						<br><br>
 						Setiap akhir pekan, panti mengadakan kegiatan kreatif seperti membuat kerajinan tangan, kelas komputer, serta sesi motivasi dan mentoring. Selain itu, Rumah Harapan juga sering menjalin kerja sama dengan relawan dan komunitas luar untuk program sosial, seperti kunjungan edukatif, bakti sosial, dan pelatihan kewirausahaan. Semua kegiatan ini dirancang untuk membangun kemandirian, rasa percaya diri, serta jiwa sosial anak-anak agar mereka siap menghadapi masa depan yang lebih baik.
@@ -294,6 +294,45 @@
 		</div><!--row-->
 	</div><!--container-->
 </section>
+
+
+<!-- INI BAGIAN KEBUTUHAN -->
+<section id="kebutuhan" class="padding-large">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<figure class="jarallax-keep-img kegiatan-image" data-speed="0.5" style="height: 100%; max-height: 500px; overflow: hidden;">
+					<img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg"
+						 alt="kebutuhan panti"
+						 class="jarallax-img">
+				</figure>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="kegiatan-block">
+					<div class="section-header">
+						<div class="title">
+							<span>Kebutuhan Panti Asuhan</span>
+						</div>
+						<h2 class="section-title">Panti Asuhan Rumah Harapan</h2>
+					</div>
+					<div class="kegiatan-content">
+					<p class="card-text" style="text-align: justify;">
+						Panti Asuhan Rumah Harapan terus berusaha memenuhi kebutuhan sehari-hari anak-anak asuh agar mereka dapat tumbuh dengan sehat, bahagia, dan berpendidikan. Beberapa kebutuhan utama kami meliputi bahan makanan pokok seperti beras, minyak, telur, dan susu; perlengkapan sekolah seperti buku, alat tulis, dan seragam; serta kebutuhan kesehatan seperti vitamin, obat-obatan, dan layanan medis rutin.
+						<br><br>
+						Kami juga sangat membutuhkan dukungan dalam bentuk pakaian layak pakai, perlengkapan tidur (seperti kasur, selimut, dan bantal), serta dana untuk perbaikan fasilitas asrama dan ruang belajar. Setiap donasi yang diberikan, baik berupa barang maupun dukungan finansial, sangat berarti bagi keberlangsungan pendidikan, kesehatan, dan kesejahteraan anak-anak di Rumah Harapan.
+					</p>
+					</div>
+
+					<div class="btn-wrap">
+						<a href="{{ route('kebutuhanp') }}" class="btn btn-accent btn-xmedium btn-rounded">Informasi Lebih Lanjut</a>
+					</div>
+				</div><!--kegiatan-block-->
+			</div>
+		</div><!--row-->
+	</div><!--container-->
+</section>
+
 
 
 

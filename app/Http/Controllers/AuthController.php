@@ -77,6 +77,11 @@ class AuthController extends Controller
         return view('user.pages.kegiatanpanti');
     }
 
+    public function kebutuhanp()
+    {
+        return view('user.pages.kebutuhanp');
+    }
+
 
 
     public function kegiatan() {
