@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+     <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/kegiatan.css') }}">
 
@@ -39,21 +41,76 @@
 	</div>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-image">
-            <img src="{{ asset('assets/images/gambar11.jpg') }}" alt="Anak-anak Panti Asuhan">
-        </div>
-        <!-- <div class="hero-content"> -->
-            <h1 class="display-4 fw-bold text-center shadow-text mb-4">Kegiatan</h1>
-            <p class="lead text-center shadow-text">Rangkaian aktivitas yang mendidik dan menyenangkan untuk anak-anak</p>
-            <a href="#activities" class="btn btn-primary mt-4">Lihat Kegiatan</a>
-        </div>
-    </section>
+    <style>
+       /* reset margin/padding bawaan browser agar tidak ada white-space */
+        html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        }
+
+        /* pastikan section keluar dari batas container Bootstrap jika masih di dalam .container */
+        .hero-section {
+        position: relative;
+        /* ambil seluruh lebar viewport */
+        width: 100vw;
+        /* ambil seluruh tinggi viewport */
+        height: 100vh;
+        /* jika masih ada overflow, sembunyikan */
+        overflow: hidden;
+
+        background-image: url('https://hopevillage.org.au/images/cache/content/hope-village-children-doing-chores-1.96825700.jpg');
+        background-size: cover;
+        background-position: center;
+        /* opsi: jika ingin background “fixed” saat scroll */
+        /* background-attachment: fixed; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        }
+
+        /* overlay setengah transparan */
+        .hero-section .overlay {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+        }
+
+        /* konten di atas overlay */
+        .hero-section .hero-content {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        }
+
+        /* bayangan teks supaya semakin kontras */
+        .shadow-text {
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+
+    </style>
+        
+      
 
     <!-- Main Content -->
     <main>
+        <section class="hero-section">
+            <div class="overlay"></div>
+          
+            <div class="hero-content">
+              <h1 class="display-4 fw-bold shadow-text mb-4">Kegiatan</h1>
+              <p class="lead shadow-text">Rangkaian aktivitas yang mendidik dan menyenangkan untuk anak-anak</p>
+              <a href="#activities" class="btn btn-primary mt-4">Lihat Kegiatan</a>
+            </div>
+          </section>
         <!-- Introduction Section -->
-        <section class="intro-section">
+        <section class="intro-section" data-aos="fade-up">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
@@ -68,45 +125,56 @@
         <section id="activities" class="py-5">
             <div class="container">
                 <!-- Activity 1 -->
-                <div class="row align-items-center activity-item animate__animated animate__fadeIn">
+                <div class="row align-items-center activity-item animate__animated animate__fadeIn" data-aos="fade-right">
                     <div class="col-lg-6 order-lg-1 order-2">
                         <h3 class="mb-4">Kegiatan Pembelajaran</h3>
                         <p class="activity-description">Setiap pagi, anak-anak berkumpul untuk belajar bersama dibimbing oleh relawan terpilih. Kegiatan ini merupakan prioritas tertinggi, membantu perkembangan intelektual dan memastikan mereka mendapatkan pendidikan dasar. Tujuan dari kegiatan ini adalah untuk mempersiapkan anak-anak menghadapi masa depan dengan penuh percaya diri dalam pengetahuan serta keterampilan hidup yang penting untuk kesuksesan.</p>
                         <a href="#" class="btn btn-primary mt-3">Lihat Detail</a>
                     </div>
                     <div class="col-lg-6 order-lg-2 order-1 activity-img-container">
-                        <img src="{{ asset('assets/images/kegiatan/belajar.jpg') }}" alt="Kegiatan Belajar" class="img-fluid rounded shadow">
+                        <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Kegiatan Belajar" class="img-fluid rounded shadow">
                     </div>
                 </div>
 
                 <!-- Activity 2 -->
-                <div class="row align-items-center activity-item animate__animated animate__fadeIn">
-                    <div class="col-lg-6 activity-img-container">
-                        <img src="{{ asset('assets/images/kegiatan/bermain.jpg') }}" alt="Kegiatan Bermain" class="img-fluid rounded shadow">
+                <div class="row activity-item animate__animated animate__fadeIn align-items-stretch" data-aos="fade-left">
+                    <!-- kolom gambar: jadi flex container supaya anaknya (img) bisa stretch -->
+                    <div class="col-lg-6 activity-img-container d-flex">
+                      <img
+                        src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg"
+                        alt="Kegiatan Bermain"
+                        class="img-fluid h-100 w-auto rounded shadow"
+                        style="object-fit: cover;"
+                      >
                     </div>
-                    <div class="col-lg-6">
-                        <h3 class="mb-4">Waktu Bermain dan Rekreasi</h3>
-                        <p class="activity-description">Waktu main anak-anak adalah waktu paling berharga dimana mereka dapat mengekspresikan diri secara bebas. Kami mendorong aktivitas yang mengembangkan kreativitas, penalaran pedagogis, dan rasa kerja sama. Kami percaya bahwa melalui permainan, mereka memperkembangkan keterampilan sosial dan mendapatkan masa-masa yang akan selalu berkesan untuk menjadi kenangan yang hangat bagi setiap masa mendatang.</p>
-                        <a href="#" class="btn btn-primary mt-3">Lihat Detail</a>
+                  
+                    <!-- kolom teks: bikin center secara vertikal jika mau -->
+                    <div class="col-lg-6 d-flex flex-column justify-content-center">
+                      <h3 class="mb-4">Waktu Bermain dan Rekreasi</h3>
+                      <p class="activity-description">
+                        Waktu main anak-anak adalah waktu paling berharga dimana mereka dapat mengekspresikan diri secara bebas. Kami mendorong aktivitas yang mengembangkan kreativitas, penalaran pedagogis, dan rasa kerja sama. Kami percaya bahwa melalui permainan, mereka memperkembangkan keterampilan sosial dan mendapatkan masa-masa yang akan selalu berkesan untuk menjadi kenangan yang hangat bagi setiap masa mendatang.
+                      </p>
+                      <a href="#" class="btn btn-primary mt-3 align-self-start">Lihat Detail</a>
                     </div>
-                </div>
+                  </div>
+                  
 
                 <!-- Activity 3 -->
-                <div class="row align-items-center activity-item animate__animated animate__fadeIn">
+                <div class="row align-items-center activity-item animate__animated animate__fadeIn" data-aos="fade-right">
                     <div class="col-lg-6 order-lg-1 order-2">
                         <h3 class="mb-4">Kreativitas dan Seni</h3>
                         <p class="activity-description">"Bakat yang dikembangkan dapat menjadi inspirasi masa depan untuk masa depan yang cerah." Kesenian merupakan bagian penting dari program kami karena dapat melatih ketelitian, kesabaran, dan kemampuan motorik halus. Dengan fokus pada karya seni yang menarik, anak-anak bisa mengembangkan imajinasi mereka tanpa batas.</p>
                         <a href="#" class="btn btn-primary mt-3">Lihat Detail</a>
                     </div>
                     <div class="col-lg-6 order-lg-2 order-1 activity-img-container">
-                        <img src="{{ asset('assets/images/kegiatan/seni.jpg') }}" alt="Kegiatan Seni" class="img-fluid rounded shadow">
+                        <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Kegiatan Seni" class="img-fluid rounded shadow">
                     </div>
                 </div>
 
                 <!-- Activity 4 -->
-                <div class="row align-items-center activity-item animate__animated animate__fadeIn">
+                <div class="row align-items-center activity-item animate__animated animate__fadeIn" data-aos="fade-left">
                     <div class="col-lg-6 activity-img-container">
-                        <img src="{{ asset('assets/images/kegiatan/kunjungan.jpg') }}" alt="Kunjungan Donatur" class="img-fluid rounded shadow">
+                        <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Kunjungan Donatur" class="img-fluid rounded shadow">
                     </div>
                     <div class="col-lg-6">
                         <h3 class="mb-4">Kunjungan dan Donasi</h3>
@@ -118,7 +186,7 @@
         </section>
 
         <!-- Gallery Section -->
-        <section class="gallery-section">
+        <section class="gallery-section" data-aos="fade-up">
             <div class="container">
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-8 text-center">
@@ -129,32 +197,32 @@
                 <div class="row gallery-container">
                     <div class="col-md-4 col-6">
                         <div class="gallery-item">
-                            <img src="{{ asset('assets/images/kegiatan/gallery-1.jpg') }}" alt="Galeri Kegiatan 1">
+                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 1">
                         </div>
                     </div>
                     <div class="col-md-4 col-6">
                         <div class="gallery-item">
-                            <img src="{{ asset('assets/images/kegiatan/gallery-2.jpg') }}" alt="Galeri Kegiatan 2">
+                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 2">
                         </div>
                     </div>
                     <div class="col-md-4 col-6">
                         <div class="gallery-item">
-                            <img src="{{ asset('assets/images/kegiatan/gallery-3.jpg') }}" alt="Galeri Kegiatan 3">
+                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 3">
                         </div>
                     </div>
                     <div class="col-md-4 col-6">
                         <div class="gallery-item">
-                            <img src="{{ asset('assets/images/kegiatan/gallery-4.jpg') }}" alt="Galeri Kegiatan 4">
+                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 4">
                         </div>
                     </div>
                     <div class="col-md-4 col-6">
                         <div class="gallery-item">
-                            <img src="{{ asset('assets/images/kegiatan/gallery-5.jpg') }}" alt="Galeri Kegiatan 5">
+                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 5">
                         </div>
                     </div>
                     <div class="col-md-4 col-6">
                         <div class="gallery-item">
-                            <img src="{{ asset('assets/images/kegiatan/gallery-6.jpg') }}" alt="Galeri Kegiatan 6">
+                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 6">
                         </div>
                     </div>
                 </div>
@@ -165,7 +233,7 @@
         </section>
 
         <!-- Testimonial Section -->
-        <section class="testimonial-section">
+        <section class="testimonial-section" data-aos="zoom-in">
             <div class="container">
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-8 text-center">
@@ -275,5 +343,17 @@
 
 <!-- Isotope (untuk filtering layout jika dibutuhkan) -->
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+ <!-- AOS JS -->
+ <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+ <script>
+   AOS.init({
+     duration: 1000,
+     once: true,
+     offset: 100
+   });
+ </script>
+
+ <!-- Bootstrap JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

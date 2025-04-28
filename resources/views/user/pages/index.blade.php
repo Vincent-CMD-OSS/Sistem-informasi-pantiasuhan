@@ -217,8 +217,8 @@
 						</>
 					</div>
 					<div class="btn-wrap">
-						<a href="{{ route('pengenalan') }}"class="btn btn-accent btn-xmedium btn-rounded">More Information</a>
-					</div>
+                        <a href="pengenalan" class="btn-donasi">Selengkapnya <i class="icon-arrow-right"></i></a>
+                    </div>
 				</div><!--pengenalan-block-->
 			</div>
 		</div><!--row-->
@@ -253,8 +253,8 @@
 					</div>
 
 					<div class="btn-wrap">
-						<a href="{{ route('sejarah') }}" class="btn btn-accent btn-xmedium btn-rounded">More Information</a>
-					</div>
+                        <a href="sejarah" class="btn-donasi">Selengkapnya <i class="icon-arrow-right"></i></a>
+                    </div>
 				</div><!--pengenalan-block-->
 			</div>
 		</div><!--row-->
@@ -290,8 +290,8 @@
 					</div>
 
 					<div class="btn-wrap">
-						<a href="{{ route('kegiatanpanti') }}" class="btn btn-accent btn-xmedium btn-rounded">More Information</a>
-					</div>
+                        <a href="kegiatanpantiasuhan" class="btn-donasi">Selengkapnya <i class="icon-arrow-right"></i></a>
+                    </div>
 				</div><!--kegiatan-block-->
 			</div>
 		</div><!--row-->
@@ -328,8 +328,8 @@
 					</div>
 
 					<div class="btn-wrap">
-						<a href="{{ route('kebutuhanp') }}" class="btn btn-accent btn-xmedium btn-rounded">Informasi Lebih Lanjut</a>
-					</div>
+                        <a href="kebutuhanp" class="btn-donasi">Selengkapnya <i class="icon-arrow-right"></i></a>
+                    </div>
 				</div><!--kegiatan-block-->
 			</div>
 		</div><!--row-->
@@ -418,17 +418,9 @@
 	
 
 	<section id="latest-blog" class="scrollspy-section bg-grey padding-large">
-		<div class="container">
-
-			<div class="row">
-
-				<div class="col">
-
-					<div class="section-header">
-						<div class="title">
-							<span>read our blog</span>
+		<div class="container">Read our blog</span>
 						</div>
-						<h2 class="section-title">latest blog</h2>
+						<h2 class="section-title">Latest blog</h2>
 					</div>
 				</div>
 
@@ -602,7 +594,7 @@
 	</section>
 	<!-- INI AKHIR BAGIAN CONTACT -->
 
-	@include('user.partials.donasi')
+	@include('user.partials.donasi')    
 
 	<!-- INI BAGIAN TESTIMONIAL -->
 	<section id="testimonial" class="padding-large">

@@ -21,11 +21,26 @@
             
             <div class="donasi-image-container">
                 <div class="donasi-image">
-                    <img src="assets/images/donasi-child.jpg" alt="Anak Rumah Harapan" class="main-image">
+                    <img src="https://i.pinimg.com/736x/4b/ad/b0/4badb0e1d75c699fb374d153c0883716.jpg" alt="Anak Rumah Harapan" class="main-image">
                 </div>
                 <div class="donasi-info">
                     <p>Donasi yang Anda berikan akan digunakan untuk memenuhi kebutuhan sehari-hari anak-anak, seperti makanan, pendidikan, perlengkapan sekolah, perawatan tempat tinggal, serta layanan kesehatan dan pendampingan emosional. Setiap bantuan dikelola secara transparan untuk memastikan mereka tumbuh dalam lingkungan yang aman, sehat, dan penuh kasih.</p>
                 </div>
+                <style>
+                    .donasi-image img {
+                        width: 100%;
+                        height: auto;
+                        max-height: 400px; /* Batasi tinggi maksimum kalau paragrafnya pendek */
+                        object-fit: cover;
+                        display: block;
+                        margin-bottom: 20px;
+                    }
+                    
+                    .donasi-image, .donasi-info {
+                        max-width: 600px;
+                        margin: auto;
+                    }
+                    </style>  
             </div>
         </div>
     </div>
