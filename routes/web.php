@@ -138,3 +138,8 @@ Route::get('/organisation', [AuthController::class, 'organisation'])->name('orga
 
 Route::get('/kegiatan-panti-asuhan', [KegiatanPantiasuhanController::class, 'kegiatanPantiAsuhan'])->name('galeri');
 
+Route::get('/profilPanti', function () {
+    return view('user.pages.profilPanti');
+})->name('profilPanti');
+
+

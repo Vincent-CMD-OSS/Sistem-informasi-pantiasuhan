@@ -151,10 +151,10 @@
 			<div class="row">
 
 				<div class="col-md-6">
-					<!-- <figure class="jarallax-keep-img">
+					<figure class="jarallax-keep-img">
 						<img src="assets/images/singleimage.jpg" alt="about us" class="jarallax-img single-image">
-					</figure> -->
-					<img src="assets/images/singleimage.jpg" alt="about us" class="jarallax-img single-image">
+					</figure>
+					<!-- <img src="assets/images/singleimage.jpg" alt="about us" class="jarallax-img single-image"> -->
 				</div>
 				<div class="col-md-6 description text-lead">
 					<p>Hope Village began as a home for just 12 orphaned and abandoned children. 
@@ -169,7 +169,7 @@
 						those in need and empowering every child to walk in their purpose.</p>
 
 					<div class="btn-wrap">
-						<a href="#" class="btn btn-accent btn-xlarge btn-rounded">View my portfolio</a>
+						<a href="{{ route('profilPanti') }}" class="btn btn-accent btn-xlarge btn-rounded">View my portfolio</a>
 					</div>
 
 				</div>
