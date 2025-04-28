@@ -120,6 +120,7 @@ class KegiatanPantiasuhanController extends Controller
 
     public function showPublic()
     {
+        
         return view('public.kebutuhan.index', compact('kebutuhan'));
     }
 

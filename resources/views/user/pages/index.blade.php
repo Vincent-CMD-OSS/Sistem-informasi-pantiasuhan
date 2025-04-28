@@ -41,7 +41,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/icomoon/icomoon.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendor.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/galeri.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/donasi.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+	
 	
 
 
@@ -600,7 +602,7 @@
 	</section>
 	<!-- INI AKHIR BAGIAN CONTACT -->
 
-
+	@include('user.partials.donasi')
 
 	<!-- INI BAGIAN TESTIMONIAL -->
 	<section id="testimonial" class="padding-large">

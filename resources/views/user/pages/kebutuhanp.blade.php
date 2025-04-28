@@ -14,9 +14,19 @@
 
 @extends('layouts.app') 
 
+@include('user.partials.navbar')
+
 @section('title', 'Kebutuhan Panti Asuhan')
 
 @section('content')
+
+<div class="side-nav-bar">
+		<input id="menu-toggle" type="checkbox" />
+		<label class="menu-btn" for="menu-toggle">
+			<span></span>
+		</label>
+	</div>
+
 <div class="container mt-0">
     <!-- Bagian Full Background -->
     <div class="text-white text-center mb-5" style="
@@ -140,6 +150,20 @@
             </div>
         </div>
     </div>
+
+    <script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
+
+	<!-- Plugin dan Skrip Tambahan -->
+	<script src="{{ asset('assets/js/plugins.js') }}"></script>
+	<script src="{{ asset('assets/js/script.js') }}"></script>
+
+	<!-- Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+
+	<!-- Isotope (untuk filtering layout jika dibutuhkan) -->
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
 @include('user.partials.footer')
 @endsection
