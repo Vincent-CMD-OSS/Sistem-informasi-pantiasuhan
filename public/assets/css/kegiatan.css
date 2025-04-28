@@ -1,0 +1,190 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* Hero section with 85vh height as requested */
+.hero-section {
+    position: relative;
+    height: 85vh;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    padding: 20px 0; /* Add some vertical padding */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 1rem;
+}
+
+.shadow-text {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #0d6efd;
+}
+
+/* Increased spacing between activity items */
+.activity-item {
+    transition: all 0.3s ease;
+    margin-bottom: 10rem; /* Increased spacing from 8rem to 10rem */
+    padding: 3rem 0; /* Increased padding from 2rem to 3rem */
+}
+
+.activity-item:hover {
+    transform: translateY(-5px);
+}
+
+.activity-item img {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.activity-item:hover img {
+    transform: scale(1.03);
+}
+
+/* Text justify in activity descriptions */
+.activity-description {
+    text-align: justify;
+}
+
+.gallery-item {
+    overflow: hidden;
+    margin-bottom: 2.5rem; /* Increased from 1.5rem to 2.5rem */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.testimonial-section {
+    background-color: #f8f9fa;
+    padding: 9rem 0; /* Increased padding from 7rem to 9rem */
+    margin-top: 5rem; /* Increased margin from 3rem to 5rem */
+}
+
+.testimonial-item {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.testimonial-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Added more spacing for sections */
+section {
+    padding: 9rem 0; /* Increased padding from 7rem to 9rem */
+    margin-bottom: 3rem; /* Added margin between sections */
+}
+
+/* Introduction section with additional spacing */
+.intro-section {
+    padding-top: 9rem; /* Added extra padding on top */
+    margin-top: 5rem; /* Added margin on top */
+}
+
+.btn-primary {
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.btn-outline-primary {
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+/* Gallery section with more spacing */
+.gallery-section {
+    padding-top: 10rem; /* Extra padding at the top */
+    padding-bottom: 10rem; /* Extra padding at the bottom */
+}
+
+.gallery-container {
+    margin-top: 5rem; /* Add space before gallery items */
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        height: 70vh; /* Slightly reduced for mobile */
+        margin-bottom: 2rem; /* Reduced margin for mobile */
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .activity-img-container {
+        margin-bottom: 2.5rem; /* Increased from 1.5rem */
+    }
+    
+    .activity-item {
+        margin-bottom: 7rem; /* Increased from 5rem but less than desktop */
+        padding: 2rem 0; /* Slightly reduced padding for mobile */
+    }
+    
+    section {
+        padding: 6rem 0; /* Adjusted padding for mobile */
+        margin-bottom: 2rem; /* Reduced margin for mobile */
+    }
+    
+    .gallery-item {
+        margin-bottom: 2rem; /* Adjusted for mobile */
+    }
+}

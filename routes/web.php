@@ -92,6 +92,10 @@ Route::get('/sejarah', function () {
     return view('user.pages.sejarah');
 })->name('sejarah');
 
+Route::get('/kegiatanpantiasuhan', function () {
+    return view('user.pages.kegiatanpantiasuhan');
+})->name('kegiatanpantiasuhan');
+
 Route::get('/pengenalan', function () {
     return view('user.pages.pengenalan');
 })->name('pengenalan');
@@ -107,10 +111,10 @@ Route::get('/kebutuhanp', function () {
 
 
 
-Route::get('/galeri', function () {
-    $kegiatan = App\Models\KegiatanPantiasuhan::latest()->get();
-    return view('galeri', compact('kegiatan'));
-});
+// Route::get('/galeri', function () {
+//     $kegiatan = App\Models\KegiatanPantiasuhan::latest()->get();
+//     return view('galeri', compact('kegiatan'));
+// });
 
 Route::get('/jadwal', [JadwalController::class, 'jadwalPublik']);
 
@@ -121,6 +125,7 @@ Route::get('/kebutuhan', [KebutuhanController::class, 'showPublic'])->name('kebu
 
 
 Route::get('/galeri', [KegiatanPantiasuhanController::class, 'galeri'])->name('galeri');
+Route::get('/operasionalpanti', [JadwalController::class, 'operasional'])->name('operasional');
 
 // Route::get('/jadwalOperasional', [JadwalController::class, 'jadwalOperasional'])->name('jadwalOperasional');
 
@@ -129,4 +134,7 @@ Route::get('/', [AuthController::class, 'index'])->name('home');
 Route::get('/organisation', [AuthController::class, 'organisation'])->name('organisation');
 
 
+
+
+Route::get('/kegiatan-panti-asuhan', [KegiatanPantiasuhanController::class, 'kegiatanPantiAsuhan'])->name('galeri');
 

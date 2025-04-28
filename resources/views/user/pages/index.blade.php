@@ -151,16 +151,17 @@
 			<div class="row">
 
 				<div class="col-md-6">
-					<figure class="jarallax-keep-img">
+					<!-- <figure class="jarallax-keep-img">
 						<img src="assets/images/singleimage.jpg" alt="about us" class="jarallax-img single-image">
-					</figure>
+					</figure> -->
+					<img src="assets/images/singleimage.jpg" alt="about us" class="jarallax-img single-image">
 				</div>
 				<div class="col-md-6 description text-lead">
-					<p><strong>Hope Village began as a home for just 12 orphaned and abandoned children. 
+					<p>Hope Village began as a home for just 12 orphaned and abandoned children. 
 						Over time, it has grown into a place of hope and transformation, becoming a family 
 						for more than 80 children. Today, Hope Village is more than just a home it is a thriving community 
 						that includes a kindergarten, primary school, high school, church, and a hub providing medical care 
-						and clean water.</strong></p>
+						and clean water.</p>
 					<p>A place where children can flourish, Hope Village is built on the foundation of love, 
 						purpose, and hope. It exists to nurture young lives, ensuring they grow with dignity, education, 
 						and the support they need to shape their future.</p>

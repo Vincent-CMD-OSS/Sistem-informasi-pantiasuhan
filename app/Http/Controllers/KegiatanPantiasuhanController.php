@@ -118,4 +118,16 @@ class KegiatanPantiasuhanController extends Controller
         return redirect()->route('admin.kegiatan.index')->with('success', 'Kegiatan berhasil dihapus!');
     }
 
+    public function showPublic()
+    {
+        return view('public.kebutuhan.index', compact('kebutuhan'));
+    }
+
+    public function galeri()
+    {
+        $kegiatan = KegiatanPantiasuhan::all();
+        return view('galeri', compact('kegiatan'));
+    }
+        
+
 }

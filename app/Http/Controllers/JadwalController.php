@@ -75,5 +75,10 @@ class JadwalController extends Controller
         return view('jadwal.publik', compact('jadwalOperasional', 'jadwalKhusus'));
     }
 
+    public function operasional() 
+    {
+        return view('user.pages.operasional');
+    }
+
 
 }
