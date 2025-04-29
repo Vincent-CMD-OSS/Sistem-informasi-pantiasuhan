@@ -88,7 +88,7 @@
 			<div class="slider-item jarallax" data-speed="0.2">
 				<img src="assets/images/gambar11.jpg" alt="banner" class="jarallax-img">
 				<div class="banner-content">
-					<h2 class="banner-title txt-fx">Children Flourishing</h2>
+					<h2 class="banner-title txt-fx">Panti Asuhan</h2>
 					<!-- <div class="btn-wrap">
 						<a href="#" class="btn-with-line">View Project</a>
 					</div> -->
@@ -98,7 +98,7 @@
 			<div class="slider-item jarallax" data-speed="0.2">
 				<img src="assets/images/Gambar12.jpg" alt="banner" class="jarallax-img">
 				<div class="banner-content">
-					<h2 class="banner-title txt-fx">Walking In Purpose</h2>
+					<h2 class="banner-title txt-fx">Rumah Harapan</h2>
 					<!-- <div class="btn-wrap">
 						<a href="#" class="btn-with-line">View Project</a>
 					</div> -->
@@ -108,7 +108,7 @@
 			<div class="slider-item jarallax" data-speed="0.2">
 				<img src="assets/images/Gambar13.jpg" alt="banner" class="jarallax-img">
 				<div class="banner-content">
-					<h2 class="banner-title txt-fx">Filled With Hope</h2>
+					<h2 class="banner-title txt-fx">Tobasa</h2>
 					<!-- <div class="btn-wrap">
 						<a href="#" class="btn-with-line">View Project</a>
 					</div> -->
