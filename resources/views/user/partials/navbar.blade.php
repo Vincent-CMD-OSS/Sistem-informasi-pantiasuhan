@@ -5,7 +5,7 @@
 					<div class="col-md-5">
 						<ul class="nav__list d-none d-md-block">
 							<li class="nav__list-item {{ Route::is('home') ? 'active-nav' : '' }}"><a href="{{ route('home') }}" class="hover-target">Home</a></li>
-							<li class="nav__list-item {{ Route::is('profil') ? 'active-nav' : '' }}"><a href="{{ route('organisation') }}" class="hover-target">Profil</a></li>
+							<li class="nav__list-item {{ Route::is('profil') ? 'active-nav' : '' }}"><a href="{{ route('profilPanti') }}" class="hover-target">Profil</a></li>
 							<li class="nav__list-item {{ Route::is('kegiatanpantiasuhan') ? 'active-nav' : '' }}"><a href="{{ route('kegiatanpantiasuhan') }}" class="hover-target">Kegiatan</a></li>
 							<li class="nav__list-item"><a href="index.html" class="hover-target">Blog</a></li>
 							<li class="nav__list-item"><a href="single-post.html" class="hover-target">Single Post</a>
