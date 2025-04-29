@@ -192,20 +192,5 @@
             </div>
         </div>
 
-        <!-- CTA Section -->
-        <div class="cta-section">
-            <div class="wave-top"></div>
-            <h2>Dukung Rumah Harapan</h2>
-            <p>Bantu kami memberikan harapan dan masa depan yang lebih baik untuk anak-anak</p>
-            <div class="cta-buttons">
-                <a href="#" class="btn primary-btn">Donasi Sekarang</a>
-                <a href="#" class="btn secondary-btn">Jadi Relawan</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
 </body>
 </html>
