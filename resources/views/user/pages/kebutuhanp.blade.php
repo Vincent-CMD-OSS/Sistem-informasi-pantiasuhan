@@ -191,52 +191,176 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
-        <section class="gallery-section" data-aos="fade-up">
+        <!-- Donasi Section -->
+        <section class="donation-section" data-aos="zoom-in">
             <div class="container">
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-8 text-center">
-                        <h2 class="section-title">Galeri Kegiatan</h2>
-                        <p>Lihat lebih banyak momen berharga yang kami abadikan bersama anak-anak</p>
+                        <h2 class="section-title">Donasi Sekarang</h2>
+                        <p>Bantu wujudkan harapan mereka, setiap donasi sangat berarti.</p>
                     </div>
                 </div>
-                <div class="row gallery-container">
-                    <div class="col-md-4 col-6">
-                        <div class="gallery-item">
-                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 1">
+        
+                <!-- Progress Bar for Donation Goal -->
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-8">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 10%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                10% Tercapai
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-6">
-                        <div class="gallery-item">
-                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 2">
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-6">
-                        <div class="gallery-item">
-                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 3">
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-6">
-                        <div class="gallery-item">
-                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 4">
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-6">
-                        <div class="gallery-item">
-                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 5">
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-6">
-                        <div class="gallery-item">
-                            <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Galeri Kegiatan 6">
-                        </div>
+                        <p class="text-center mt-2">Terkumpul <strong>Rp 10.000.000</strong> dari <strong>Rp100.000.000</strong></p>
                     </div>
                 </div>
-                <div class="text-center mt-5">
-                    <a href="#" class="btn btn-primary">Lihat Semua Galeri</a>
+        
+                <!-- Donation Tiers -->
+                <section class="donation-section bg-white py-5" data-aos="fade-up" style="font-family: 'Montserrat', sans-serif;">
+                    <!-- Google Font Montserrat -->
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+                  
+                    <style>
+                      .donation-section { background-color: #f8f9fa; }
+                      .donation-title { color: #2d6a4f; font-weight: 700; }
+                      .donation-lead { color: #495057; }
+                  
+                      /* Progress Bar */
+                      .donation-progress { height: 1.25rem; border-radius: 0.625rem; overflow: hidden; background: #e9ecef; }
+                      .donation-progress .progress-bar { background: linear-gradient(90deg, #52b788, #95d5b2); }
+                  
+                      /* Cards */
+                      .donation-item {
+                        position: relative;
+                        border-radius: 1rem;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        overflow: hidden;
+                      }
+                      .donation-item:hover {
+                        transform: translateY(-8px);
+                        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+                      }
+                      .donation-item:active {
+                        transform: translateY(-2px) scale(0.97);
+                        transition-duration: 0.1s;
+                      }
+                      .donation-item::after {
+                        content: '';
+                        position: absolute;
+                        width: 0; height: 0;
+                        background: rgba(255, 255, 255, 0.3);
+                        border-radius: 50%;
+                        pointer-events: none;
+                        transform: translate(-50%, -50%);
+                        transition: width 0.4s ease, height 0.4s ease, opacity 0.8s ease;
+                      }
+                      .donation-item:active::after {
+                        width: 200px; height: 200px;
+                        top: 50%; left: 50%;
+                        opacity: 0;
+                        transition: width 0s, height 0s, opacity 0.8s;
+                      }
+                      .donation-item .tier-icon {
+                        font-size: 2.5rem;
+                        margin-bottom: 0.75rem;
+                        color: #ffc107;
+                      }
+                      .donation-item h3 { font-weight: 600; color: #2d6a4f; }
+                      .donation-amount { font-size: 1.5rem; font-weight: 700; color: #1b4332; }
+                      .donation-item p { color: #495057; }
+                  
+                      /* Tier specific accent bars */
+                      .donation-item[data-tier="bronze"]::before,
+                      .donation-item[data-tier="silver"]::before,
+                      .donation-item[data-tier="gold"]::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 0.25rem;
+                        width: 100%;
+                      }
+                      .donation-item[data-tier="bronze"]::before { background: #cd7f32; }
+                      .donation-item[data-tier="silver"]::before { background: #c0c0c0; }
+                      .donation-item[data-tier="gold"]::before { background: #ffc107; }
+                  
+                      /* CTA Button */
+                      .btn-donate {
+                        background: linear-gradient(90deg, #52b788, #40916c);
+                        color: #fff;
+                        font-weight: 600;
+                        padding: 0.75rem 1.75rem;
+                        border-radius: 2rem;
+                        transition: background 0.3s;
+                      }
+                      .btn-donate:hover { background: linear-gradient(90deg, #40916c, #2d6a4f); }
+                    </style>
+                  
+                  
+                  
+                      <!-- Progress Bar -->
+                      {{-- <div class="row justify-content-center mb-5">
+                        <div class="col-md-8">
+                          <div class="donation-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <p class="text-center mt-2">Terkumpul <strong>Rp65.000.000</strong> dari <strong>Rp100.000.000</strong></p>
+                        </div>
+                      </div> --}}
+                  
+                      <!-- Donation Tiers -->
+                      <div class="row justify-content-center gy-4 donation-options">
+                        <!-- Bronze -->
+                        <div class="col-md-4">
+                          <div class="card donation-item p-4 h-100 text-center d-flex flex-column" data-tier="bronze">
+                            <i class="bi bi-gem tier-icon"></i>
+                            <h3 class="mb-2">Bronze</h3>
+                            <p class="donation-amount mb-2">Rp50.000</p>
+                            <p class="mb-4 flex-grow-1">Menambah alat tulis lengkap bagi mereka.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Donasi</a>
+                          </div>
+                        </div>
+                        <!-- Silver -->
+                        <div class="col-md-4">
+                          <div class="card donation-item p-4 h-100 text-center d-flex flex-column" data-tier="silver">
+                            <i class="bi bi-gem tier-icon"></i>
+                            <h3 class="mb-2">Silver</h3>
+                            <p class="donation-amount mb-2">Rp100.000</p>
+                            <p class="mb-4 flex-grow-1">Menambah fasilitas pembelajaran bagi mereka.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Donasi</a>
+                          </div>
+                        </div>
+                        <!-- Gold -->
+                        <div class="col-md-4">
+                          <div class="card donation-item p-4 h-100 text-center d-flex flex-column" data-tier="gold">
+                            <i class="bi bi-gem tier-icon"></i>
+                            <h3 class="mb-2">Gold</h3>
+                            <p class="donation-amount mb-2">Rp200.000</p>
+                            <p class="mb-4 flex-grow-1">Beasiswa bulanan untuk satu anak.</p>
+                            <a href="#" class="btn btn-outline-primary mt-auto">Donasi</a>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- Call to Action -->
+                      <div class="row mt-5 justify-content-center">
+                        <div class="col-md-8 text-center">
+                          <a href="/donate" class="btn btn-donate">Donasi Sekarang</a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  
+        
+                <!-- Call to Action -->
+                {{-- <div class="row mt-5 justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <p>Ayo bergabung menjadi donatur dan berikan dampak nyata bagi masa depan mereka.</p>
+                        <a href="/donate" class="btn btn-lg btn-success">Donasi Sekarang</a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
+        
 
         <!-- Testimonial Section -->
         <section class="testimonial-section" data-aos="zoom-in">
