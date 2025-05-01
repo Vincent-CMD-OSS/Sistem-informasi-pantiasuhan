@@ -13,6 +13,7 @@ use App\Http\Controllers\DonasiController;
 
 
 
+
 Route::get('/admin', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('admin.login.submit');
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('admin.register');
@@ -92,9 +93,10 @@ Route::get('/sejarah', function () {
     return view('user.pages.sejarah');
 })->name('sejarah');
 
-Route::get('/kegiatanpantiasuhan', function () {
-    return view('user.pages.kegiatanpantiasuhan');
-})->name('kegiatanpantiasuhan');
+// Route::get('/kegiatanpantiasuhan', function () {
+//     return view('user.pages.kegiatanpantiasuhan');
+// })->name('kegiatanpantiasuhan');
+
 
 Route::get('/pengenalan', function () {
     return view('user.pages.pengenalan');
@@ -141,5 +143,10 @@ Route::get('/kegiatan-panti-asuhan', [KegiatanPantiasuhanController::class, 'sho
 Route::get('/profilPanti', function () {
     return view('user.pages.profilPanti');
 })->name('profilPanti');
+
+Route::get('/kegiatan/{id}', [KegiatanPantiasuhanController::class, 'detail'])->name('kegiatan.detail');
+
+Route::get('/kegiatanpantiasuhan', [KegiatanPantiasuhanController::class, 'showPublic'])->name('kegiatanpantiasuhan');
+
 
 

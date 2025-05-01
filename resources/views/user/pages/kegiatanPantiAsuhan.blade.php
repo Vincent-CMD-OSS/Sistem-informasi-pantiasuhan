@@ -139,7 +139,10 @@
                                     <i class="fas fa-calendar-alt me-2 text-primary"></i>
                                     <span>{{ \Carbon\Carbon::parse($item->tanggal_kegiatan)->format('d F Y') }}</span>
                                 </div>
-                                <a href="#" class="btn btn-primary mt-3">Lihat Detail</a>
+
+
+                                <a href="{{ route('kegiatan.detail', $item->kegiatan_id) }}" class="btn btn-primary mt-3">Lihat Detail</a>
+
                             </div>
                             <div class="col-lg-6 {{ $index % 2 == 0 ? 'order-lg-2 order-1' : '' }} activity-img-container">
                                 <img src="{{ asset($item->gambar_utama) }}" alt="{{ $item->nama_kegiatan }}" class="img-fluid rounded shadow">

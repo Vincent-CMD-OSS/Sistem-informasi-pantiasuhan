@@ -129,6 +129,14 @@ class KegiatanPantiasuhanController extends Controller
         $kegiatan = KegiatanPantiasuhan::all();
         return view('galeri', compact('kegiatan'));
     }
-        
+    
+    /**
+     * Display the detailed view of a specific activity.
+     */
+    public function detail($id)
+    {
+        $kegiatan = KegiatanPantiasuhan::findOrFail($id);
+        return view('user.pages.detailKegiatan', compact('kegiatan'));
+    }
 
 }
