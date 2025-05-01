@@ -239,3 +239,184 @@
         padding: 0;
     }
 }   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Activities Section Styles */
+
+/* Activity Items */
+.activity-item {
+    position: relative;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.activity-item:hover {
+    transform: translateY(-5px);
+}
+
+.activity-img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 350px;
+}
+
+.activity-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.activity-item:hover .activity-img-container img {
+    transform: scale(1.05);
+}
+
+.activity-description {
+    min-height: 120px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    color: #6c757d;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Content styling */
+.col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.col-lg-6 h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Info boxes (location and date) */
+.info-box {
+    background-color: #f8f9fa;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6c757d;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.info-box i {
+    color: #ffc107;
+    margin-right: 8px;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #333;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+/* Date badge similar to gallery */
+.date-badge-activity {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 193, 7, 0.9);
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .col-lg-6 h3 {
+        font-size: 22px;
+    }
+    
+    .activity-description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .activity-img-container {
+        height: 300px;
+    }
+    
+    .activity-description {
+        min-height: 100px;
+    }
+    
+    .info-box {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    .activity-img-container {
+        height: 250px;
+    }
+    
+    .col-lg-6 {
+        padding: 15px;
+    }
+    
+    .col-lg-6 h3 {
+        font-size: 20px;
+    }
+}

@@ -13,7 +13,7 @@ use App\Http\Controllers\DonasiController;
 
 
 
-// Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
+Route::get('/admin', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('admin.login.submit');
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('admin.register');
 // Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');

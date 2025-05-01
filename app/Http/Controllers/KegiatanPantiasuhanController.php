@@ -120,8 +120,8 @@ class KegiatanPantiasuhanController extends Controller
 
     public function showPublic()
     {
-        
-        return view('public.kebutuhan.index', compact('kebutuhan'));
+        $kegiatan = KegiatanPantiasuhan::latest()->get();
+        return view('user.pages.kegiatanPantiAsuhan', compact('kegiatan'));
     }
 
     public function galeri()

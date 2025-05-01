@@ -121,69 +121,43 @@
             </div>
         </section>
 
+
         <!-- Activities Section -->
         <section id="activities" class="py-5">
             <div class="container">
-                <!-- Activity 1 -->
-                <div class="row align-items-center activity-item animate__animated animate__fadeIn" data-aos="fade-right">
-                    <div class="col-lg-6 order-lg-1 order-2">
-                        <h3 class="mb-4">Kegiatan Pembelajaran</h3>
-                        <p class="activity-description">Setiap pagi, anak-anak berkumpul untuk belajar bersama dibimbing oleh relawan terpilih. Kegiatan ini merupakan prioritas tertinggi, membantu perkembangan intelektual dan memastikan mereka mendapatkan pendidikan dasar. Tujuan dari kegiatan ini adalah untuk mempersiapkan anak-anak menghadapi masa depan dengan penuh percaya diri dalam pengetahuan serta keterampilan hidup yang penting untuk kesuksesan.</p>
-                        <a href="#" class="btn btn-primary mt-3">Lihat Detail</a>
+                @if($kegiatan->count() > 0)
+                    @foreach($kegiatan as $index => $item)
+                        <div class="row align-items-center activity-item animate__animated animate__fadeIn" data-aos="{{ $index % 2 == 0 ? 'fade-right' : 'fade-left' }}">
+                            <div class="col-lg-6 {{ $index % 2 == 0 ? 'order-lg-1 order-2' : '' }}">
+                                <h3 class="mb-4">{{ $item->nama_kegiatan }}</h3>
+                                <p class="activity-description">{{ \Illuminate\Support\Str::limit($item->deskripsi, 200, '...') }}</p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                                    <span>{{ $item->lokasi }}</span>
+                                </div>
+                                <div class="d-flex align-items-center mt-2 mb-3">
+                                    <i class="fas fa-calendar-alt me-2 text-primary"></i>
+                                    <span>{{ \Carbon\Carbon::parse($item->tanggal_kegiatan)->format('d F Y') }}</span>
+                                </div>
+                                <a href="#" class="btn btn-primary mt-3">Lihat Detail</a>
+                            </div>
+                            <div class="col-lg-6 {{ $index % 2 == 0 ? 'order-lg-2 order-1' : '' }} activity-img-container">
+                                <img src="{{ asset($item->gambar_utama) }}" alt="{{ $item->nama_kegiatan }}" class="img-fluid rounded shadow">
+                            </div>
+                        </div>
+                        @if(!$loop->last)
+                            <hr class="my-5">
+                        @endif
+                    @endforeach
+                @else
+                    <div class="text-center">
+                        <p>Belum ada kegiatan yang ditambahkan.</p>
                     </div>
-                    <div class="col-lg-6 order-lg-2 order-1 activity-img-container">
-                        <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Kegiatan Belajar" class="img-fluid rounded shadow">
-                    </div>
-                </div>
-
-                <!-- Activity 2 -->
-                <div class="row activity-item animate__animated animate__fadeIn align-items-stretch" data-aos="fade-left">
-                    <!-- kolom gambar: jadi flex container supaya anaknya (img) bisa stretch -->
-                    <div class="col-lg-6 activity-img-container d-flex">
-                      <img
-                        src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg"
-                        alt="Kegiatan Bermain"
-                        class="img-fluid h-100 w-auto rounded shadow"
-                        style="object-fit: cover;"
-                      >
-                    </div>
-                  
-                    <!-- kolom teks: bikin center secara vertikal jika mau -->
-                    <div class="col-lg-6 d-flex flex-column justify-content-center">
-                      <h3 class="mb-4">Waktu Bermain dan Rekreasi</h3>
-                      <p class="activity-description">
-                        Waktu main anak-anak adalah waktu paling berharga dimana mereka dapat mengekspresikan diri secara bebas. Kami mendorong aktivitas yang mengembangkan kreativitas, penalaran pedagogis, dan rasa kerja sama. Kami percaya bahwa melalui permainan, mereka memperkembangkan keterampilan sosial dan mendapatkan masa-masa yang akan selalu berkesan untuk menjadi kenangan yang hangat bagi setiap masa mendatang.
-                      </p>
-                      <a href="#" class="btn btn-primary mt-3 align-self-start">Lihat Detail</a>
-                    </div>
-                  </div>
-                  
-
-                <!-- Activity 3 -->
-                <div class="row align-items-center activity-item animate__animated animate__fadeIn" data-aos="fade-right">
-                    <div class="col-lg-6 order-lg-1 order-2">
-                        <h3 class="mb-4">Kreativitas dan Seni</h3>
-                        <p class="activity-description">"Bakat yang dikembangkan dapat menjadi inspirasi masa depan untuk masa depan yang cerah." Kesenian merupakan bagian penting dari program kami karena dapat melatih ketelitian, kesabaran, dan kemampuan motorik halus. Dengan fokus pada karya seni yang menarik, anak-anak bisa mengembangkan imajinasi mereka tanpa batas.</p>
-                        <a href="#" class="btn btn-primary mt-3">Lihat Detail</a>
-                    </div>
-                    <div class="col-lg-6 order-lg-2 order-1 activity-img-container">
-                        <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Kegiatan Seni" class="img-fluid rounded shadow">
-                    </div>
-                </div>
-
-                <!-- Activity 4 -->
-                <div class="row align-items-center activity-item animate__animated animate__fadeIn" data-aos="fade-left">
-                    <div class="col-lg-6 activity-img-container">
-                        <img src="https://hopevillage.org.au/images/cache/content/hope-village-primary-school-32.7ccea2cc.jpg" alt="Kunjungan Donatur" class="img-fluid rounded shadow">
-                    </div>
-                    <div class="col-lg-6">
-                        <h3 class="mb-4">Kunjungan dan Donasi</h3>
-                        <p class="activity-description">Keterbukaaan adalah kunci dari kualitas hidup yang di panti asuhan. Kami selalu menerima kunjungan, berbagi bercerita, berbagi ilmu dan pengalaman berharga dari para donatur, relawan, maupun masyarakat luas yang ingin berkontribusi dalam menjadi bagian dari mereka untuk memberikan kehangatan dan menjadikan senyum di setiap harinya.</p>
-                        <a href="#" class="btn btn-primary mt-3">Lihat Detail</a>
-                    </div>
-                </div>
+                @endif
             </div>
         </section>
+
+
 
         <!-- Gallery Section -->
         <section class="gallery-section" data-aos="fade-up">
