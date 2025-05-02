@@ -337,7 +337,7 @@
 </section>
 
 
-
+@include('user.partials.kunjungan')
 
 
 <!-- INI BAGIAN SERVICE -->

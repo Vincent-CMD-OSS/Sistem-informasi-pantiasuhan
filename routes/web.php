@@ -110,6 +110,10 @@ Route::get('/kebutuhanp', function () {
     return view('user.pages.kebutuhanp');
 })->name('kebutuhanp');
 
+Route::get('/operasional', function () {
+    return view('user.pages.operasional');
+})->name('operasional');
+
 
 
 

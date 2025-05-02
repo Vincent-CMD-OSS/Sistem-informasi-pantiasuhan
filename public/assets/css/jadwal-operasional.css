@@ -83,6 +83,13 @@
     background-color: #118AB2;
 }
 
+.black-bg {
+    background-color: #000; 
+  }
+.green-bg {
+    background-color: greenyellow; 
+  }
+
 .jadwal-text h4 {
     font-size: 18px;
     font-weight: 600;
@@ -133,6 +140,27 @@
     color: #1a2942;
     margin: 0;
 }
+
+/* CSS untuk ikon kontak */
+.contact-icons {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;         /* jarak antar ikon */
+  }
+  .contact-icons li {
+    margin: 0;
+  }
+  .contact-icons img {
+    width: 40px;       /* sesuaikan ukuran ikon */
+    height: 40px;
+    transition: transform .2s;
+  }
+  .contact-icons a:hover img {
+    transform: scale(1.1);
+  }
+  
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
