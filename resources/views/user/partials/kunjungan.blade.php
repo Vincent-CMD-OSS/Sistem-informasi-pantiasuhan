@@ -17,7 +17,7 @@
                             </div>
                             <div class="jadwal-text">
                                 <h4>Hari Kunjungan</h4>
-                                <p>Selasa - Sabtu</p>
+                                <p>Senin - Sabtu</p>
                             </div>
                         </div>
 
@@ -27,7 +27,7 @@
                             </div>
                             <div class="jadwal-text">
                                 <h4>Jam Kunjungan</h4>
-                                <p>10.00 - 12.00 WIB<br>14.00 - 16.00 WIB</p>
+                                <p>10.00 - 12.00 WIB<br>14.00 - 17.00 WIB</p>
                             </div>
                         </div>
 
@@ -37,18 +37,18 @@
                             </div>
                             <div class="jadwal-text">
                                 <h4>Reservasi</h4>
-                                <p>Kunjungan wajib reservasi minimal 5 hari sebelumnya melalui:</p>
+                                <p>Kunjungan wajib reservasi minimal 4 hari sebelumnya melalui:</p>
                               
                                 <!-- HTML icon links -->
                                 <ul class="contact-icons">
                                   <li>
                                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kunjungan@rumahharapan.org" target="_blank" title="Email ke Admin">
-                                        <img src="{{ asset('images/img/gmail.jpg') }}" alt="Gmail" />
+                                        <img src="assets/images/gmail.jpg" alt="Gmail" />
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="https://wa.me/6281234567890" target="_blank" title="Chat Admin di WhatsApp">
-                                      <img src="{{ asset('assets/icons/whatsapp.svg') }}" alt="WhatsApp" />
+                                    <a href="https://wa.me/6281265455903" target="_blank" title="Chat Admin di WhatsApp">
+                                      <img src="assets/images/1234.jpg" alt="WhatsApp" />
                                     </a>
                                   </li>
                                 </ul>
@@ -84,6 +84,9 @@
                         <div class="jadwal-image-caption">
                             <h3>Selamat Datang di Rumah Harapan</h3>
                         </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="operasional" class="btn-donasi">Selengkapnya <i class="icon-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
