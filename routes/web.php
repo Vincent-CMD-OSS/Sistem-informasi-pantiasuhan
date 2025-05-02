@@ -144,9 +144,11 @@ Route::get('/organisation', [AuthController::class, 'organisation'])->name('orga
 
 Route::get('/kegiatan-panti-asuhan', [KegiatanPantiasuhanController::class, 'showPublic'])->name('galeri');
 
-Route::get('/profilPanti', function () {
-    return view('user.pages.profilPanti');
-})->name('profilPanti');
+// Route::get('/profilPanti', function () {
+//     return view('user.pages.profilPanti');
+// })->name('profilPanti');
+
+Route::get('/profilPanti', [ProfilPantiController::class, 'showPublic'])->name('profilPanti');  
 
 Route::get('/kegiatan/{id}', [KegiatanPantiasuhanController::class, 'detail'])->name('kegiatan.detail');
 

@@ -36,4 +36,16 @@ class ProfilPantiController extends Controller
         return view('profil.show', compact('profil'));
     }
 
+    public function showPublic()
+    {
+        // Get the first/active profile
+        $profil = \App\Models\ProfilPanti::first();
+        
+        // You can also fetch gallery images and staff members if you have those models
+        // $galeri = \App\Models\Galeri::all();
+        // $pengurus = \App\Models\Pengurus::all();
+        
+        // Return the view with the data
+        return view('user.pages.profilPanti', compact('profil'));
+    }
 }

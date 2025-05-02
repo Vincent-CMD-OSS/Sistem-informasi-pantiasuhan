@@ -417,7 +417,7 @@
 
 	
 
-	<section id="latest-blog" class="scrollspy-section bg-grey padding-large">
+	<!-- <section id="latest-blog" class="scrollspy-section bg-grey padding-large">
 		<div class="container">Read our blog</span>
 						</div>
 						<h2 class="section-title">Latest blog</h2>
@@ -508,7 +508,7 @@
 			</div>
 
 		</div>
-	</section>
+	</section> -->
 
 
 	<!-- INI BAGIAN CONTACT -->
