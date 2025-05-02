@@ -15,10 +15,10 @@ class UserSeeder extends Seeder
         // Cek apakah email sudah ada, kalau belum baru insert
         if (!User::where('email', $email)->exists()) {
             User::create([
-                'name' => 'Admin 1',
+                'nama' => 'Admin 1', // ← ganti 'name' jadi 'nama'
                 'email' => $email,
                 'password' => Hash::make('password123'),
-            ]);
+            ]);            
                 // Bisa tambah user lain juga:
             // User::create([
             //     'name' => 'User Biasa',
