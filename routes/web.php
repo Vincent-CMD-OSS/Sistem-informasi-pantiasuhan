@@ -114,6 +114,10 @@ Route::get('/operasional', function () {
     return view('user.pages.operasional');
 })->name('operasional');
 
+Route::get('/donatur', function () {
+    return view('user.pages.donatur');
+})->name('donatur');
+
 
 
 

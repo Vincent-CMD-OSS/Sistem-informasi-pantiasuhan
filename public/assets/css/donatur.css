@@ -1,0 +1,65 @@
+/* public/assets/css/donatur.css */
+
+#donatur {
+    background: #ffffff;
+  }
+  
+  /* blob shape kiri */
+  /* #donatur .blob {
+    top: -120px;
+    left: -180px;
+    width: 600px;
+    height: 700px;
+    background: #C6EEFF;
+    clip-path: ellipse(65% 55% at 40% 40%);
+    opacity: 0.4;
+    z-index: 0;
+  } */
+  
+  /* pastikan konten di atas blob */
+  #donatur .donor-item {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* atur jarak antar item */
+  #donatur .donor-item {
+    margin-bottom: 2rem;
+  }
+  
+  /* carousel indicators lebih propsional */
+  #donorCarousel .carousel-indicators {
+    bottom: -10px;
+  }
+  #donorCarousel .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #aaa;
+  }
+  #donorCarousel .carousel-indicators .active {
+    background-color: #333;
+  }
+  
+  /* CSS khusus untuk judul “Donatur” */
+#donatur h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;            /* Montserrat Bold */
+    font-size: 4rem;             /* sesuaikan besar kecilnya */
+    line-height: 1.1;            
+    text-transform: uppercase;    /* semua huruf menjadi kapital */
+    letter-spacing: -1px;         /* rapatkan jarak antar huruf */
+    color: #222222;               /* warna gelap untuk kontras */
+    margin-bottom: 2rem;          /* jarak ke konten di bawahnya */
+    text-align: center;           
+  }
+  
+  /* Responsif: ukuran font diperkecil di layar kecil */
+  @media (max-width: 768px) {
+    #donatur h2 {
+      font-size: 2.5rem;
+      letter-spacing: -0.5px;
+    }
+  }
+  
+  

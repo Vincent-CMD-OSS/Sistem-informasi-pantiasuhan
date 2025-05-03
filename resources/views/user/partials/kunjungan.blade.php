@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="jadwal-item">
-                            <div class="icon-box blue-bg">
+                            <div class="icon-box green-bg">
                                 <i class="icon icon-info"></i>
                             </div>
                             <div class="jadwal-text">
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="jadwal-item">
-                            <div class="icon-box green-bg">
+                            <div class="icon-box blue-bg">
                                 <i class="icon icon-location"></i>
                             </div>
                             <div class="jadwal-text">
