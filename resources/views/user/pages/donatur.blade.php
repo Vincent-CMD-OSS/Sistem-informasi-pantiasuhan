@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kebutuhan Panti Asuhan</title>
+    <title>Donatur</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -113,7 +113,7 @@
             <div class="hero-content">
                 <h1 class="display-4 fw-bold shadow-text mb-4">Donatur</h1>
                 <p class="lead shadow-text">Rumah Harapan membutuhkan dukungan Anda untuk terus memberi kehidupan yang layak bagi anak-anak</p>                
-              <a href="#activities" class="btn btn-primary mt-4">Lihat Kebutuhan</a>
+              {{-- <a href="donatur" class="btn btn-primary mt-4">Lihat Selengkapnya</a> --}}
             </div>
           </section>
         <!-- Introduction Section -->
