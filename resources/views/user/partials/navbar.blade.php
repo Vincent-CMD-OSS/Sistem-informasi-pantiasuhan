@@ -7,6 +7,8 @@
 							<li class="nav__list-item {{ Route::is('home') ? 'active-nav' : '' }}"><a href="{{ route('home') }}" class="hover-target">Home</a></li>
 							<li class="nav__list-item {{ Route::is('profil') ? 'active-nav' : '' }}"><a href="{{ route('profilPanti') }}" class="hover-target">Profil</a></li>
 							<li class="nav__list-item {{ Route::is('kegiatanpantiasuhan') ? 'active-nav' : '' }}"><a href="{{ route('kegiatanpantiasuhan') }}" class="hover-target">Kegiatan</a></li>
+							<li class="nav__list-item {{ Route::is('kebutuhanp') ? 'active-nav' : '' }}"><a href="{{ route('kebutuhanp') }}" class="hover-target">Kebutuhan</a></li>
+							<li class="nav__list-item {{ Route::is('donatur') ? 'active-nav' : '' }}"><a href="{{ route('donatur') }}" class="hover-target">Donasi</a></li>
 							<li class="nav__list-item"><a href="index.html" class="hover-target">Blog</a></li>
 							<li class="nav__list-item"><a href="single-post.html" class="hover-target">Single Post</a>
 							</li>

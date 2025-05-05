@@ -113,7 +113,7 @@
             <div class="hero-content">
                 <h1 class="display-4 fw-bold shadow-text mb-4">Donatur</h1>
                 <p class="lead shadow-text">Rumah Harapan membutuhkan dukungan Anda untuk terus memberi kehidupan yang layak bagi anak-anak</p>                
-              {{-- <a href="donatur" class="btn btn-primary mt-4">Lihat Selengkapnya</a> --}}
+              <a href="#donatur" class="btn btn-primary mt-4">Lihat Selengkapnya</a>
             </div>
           </section>
         <!-- Introduction Section -->
