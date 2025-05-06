@@ -11,4 +11,10 @@ class ProfilPanti extends Model
     protected $fillable = [
         'nama', 'tentang', 'visi', 'misi', 'alamat', 'nomor_telepon', 'email'
     ];
+
+    public function pendiri()
+    {
+        return $this->hasMany(Pendiri::class, 'profil_panti_id');
+    }
+
 }

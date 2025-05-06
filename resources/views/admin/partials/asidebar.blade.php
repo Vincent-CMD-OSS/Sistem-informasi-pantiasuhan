@@ -11,7 +11,7 @@
         <span class="menu-label">Beranda</span>
     </a>
     
-    <a href="{{ route('admin.profile') }}" class="menu-item {{ $activeMenu == 'profile' ? 'active' : '' }}">
+    <a href="{{ route('admin.profil.index') }}" class="menu-item {{ $activeMenu == 'profile' ? 'active' : '' }}">
         <i class="fas fa-table"></i>
         <span class="menu-label">Profile</span>
     </a>
