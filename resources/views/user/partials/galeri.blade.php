@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <div class="section-header text-center mb-5">
                     <div class="title">
-                        <span>dokumentasi kegiatan</span>
+                        <span>Dokumentasi kegiatan</span>
                     </div>
                     <h2 class="section-title">Galeri Digital</h2>
                     <p class="mt-4 galeri-subtitle">
@@ -20,9 +20,9 @@
             <div class="col-md-6">
                 <div class="galeri-item mb-5">
                     <figure class="galeri-image">
-                        <img src="{{ asset('assets/images/gallery/media-team.jpg') }}" alt="Hope Village Media Team" class="img-fluid rounded shadow">
+                        <img src="assets/images/fotohope.jpeg" alt="Hope Village Media Team" class="img-fluid rounded shadow">
                         <div class="date-badge">
-                            <span>dd/mm/yyyy</span>
+                            <span>05/05/2025</span>
                         </div>
                     </figure>
                     <div class="galeri-content mt-4">
@@ -39,13 +39,13 @@
                     <div class="col-12 mb-4">
                         <div class="galeri-item-small d-flex">
                             <figure class="galeri-image-small me-4">
-                                <img src="{{ asset('assets/images/gallery/roy-lena.jpg') }}" alt="Roy & Lena" class="img-fluid rounded shadow">
+                                <img src="assets/images/Sarah.jpg" alt="Sarah" class="img-fluid rounded shadow">
                                 <div class="date-badge-small">
                                     <span>dd/mm/yyyy</span>
                                 </div>
                             </figure>
                             <div class="galeri-content-small">
-                                <h4>Roy & Lena</h4>
+                                <h4>Sarah</h4>
                                 <p>Temukan perjalanan transformatif Roy dan Lena di Hope Village, tempat mereka...</p>
                             </div>
                         </div>
@@ -54,13 +54,13 @@
                     <div class="col-12 mb-4">
                         <div class="galeri-item-small d-flex">
                             <figure class="galeri-image-small me-4">
-                                <img src="{{ asset('assets/images/gallery/buenga-novi-joel.jpg') }}" alt="Kisah Buenga, Novi & Joel" class="img-fluid rounded shadow">
+                                <img src="assets/images/siblings1.jpg" alt="Siblings" class="img-fluid rounded shadow">
                                 <div class="date-badge-small">
                                     <span>dd/mm/yyyy</span>
                                 </div>
                             </figure>
                             <div class="galeri-content-small">
-                                <h4>Kisah Buenga, Novi & Joel</h4>
+                                <h4>Siblings</h4>
                                 <p>A heartbreaking beginning led to an inspiring transformation. Meet Buenga, Novi...</p>
                             </div>
                         </div>
@@ -69,14 +69,14 @@
                     <div class="col-12">
                         <div class="galeri-item-small d-flex">
                             <figure class="galeri-image-small me-4">
-                                <img src="{{ asset('assets/images/gallery/anung.jpg') }}" alt="Anung" class="img-fluid rounded shadow">
+                                <img src="assets/images/Marchel.jpg" alt="Marchel" class="img-fluid rounded shadow">
                                 <div class="date-badge-small">
                                     <span>dd/mm/yyyy</span>
                                 </div>
                             </figure>
                             <div class="galeri-content-small">
-                                <h4>Anung</h4>
-                                <p>Bertemu dengan Anung, yang pada usia 10 tahun, tiba di Hope Village bersama adik laki-laki...</p>
+                                <h4>Marchel</h4>
+                                <p>Bertemu dengan Marchel, yang pada usia 10 tahun, tiba di Hope Village bersama adik laki-laki...</p>
                             </div>
                         </div>
                     </div>

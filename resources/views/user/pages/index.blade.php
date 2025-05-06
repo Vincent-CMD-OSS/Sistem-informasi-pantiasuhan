@@ -200,7 +200,7 @@
 		<div class="row">
 			<div class="col-md-6">
 				<figure class="jarallax-keep-img pengenalan-image" data-speed="0.5" style="height: 100%; max-height: 500px; overflow: hidden;">
-					<img src="https://hopevillage.org.au/images/splits/crops/image.48fe7ca8.hope_village_aerial_shot_of_high_school_1.jpg" alt="Pengenalan Panti Asuhan" class="jarallax-img">
+					<img src="assets/images/fotohope.jpeg" alt="Pengenalan Panti Asuhan" class="jarallax-img">
 				</figure>
 			</div>
 			<div class="col-md-6">
@@ -270,7 +270,7 @@
 		<div class="row">
 			<div class="col-md-6">
 				<figure class="jarallax-keep-img kegiatan-image" data-speed="0.5" style="height: 100%; max-height: 500px; overflow: hidden;">
-					<img src="https://hopevillage.org.au/images/cache/content/hope-village-children-lining-up-for-school-1.05ae2122.jpg" alt="kegiatan panti" class="jarallax-img">
+					<img src="assets/images/kegiatan1.jpg" alt="kegiatan panti" class="jarallax-img">
 				</figure>
 			</div>
 			<div class="col-md-6">
