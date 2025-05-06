@@ -84,60 +84,60 @@ Route::prefix('admin')->middleware(['auth'])->as('admin.')->group(function () {
 
     // routes/web.php
 
-// Hanya ini yang untuk halaman profil
-// Route::get('/admin/profil', [ProfilPantiController::class, 'index'])->name('admin.profil.index');
+    // Hanya ini yang untuk halaman profil
+    // Route::get('/admin/profil', [ProfilPantiController::class, 'index'])->name('admin.profil.index');
 
-// Store profil
-// Route::post('/admin/profil', [ProfilPantiController::class, 'store'])->name('admin.profil.store');
+    // Store profil
+    // Route::post('/admin/profil', [ProfilPantiController::class, 'store'])->name('admin.profil.store');
 
-// CRUD pendiri tetap lewat PendiriController
-// Route::post('/admin/pendiri', [PendiriController::class, 'store'])->name('admin.pendiri.store');
-// Route::get('/admin/pendiri/{id}/edit', [PendiriController::class, 'edit'])->name('admin.pendiri.edit');
-// Route::put('/admin/pendiri/{id}', [PendiriController::class, 'update'])->name('admin.pendiri.update');
-// Route::delete('/admin/pendiri/{id}', [PendiriController::class, 'destroy'])->name('admin.pendiri.destroy');
+    // CRUD pendiri tetap lewat PendiriController
+    // Route::post('/admin/pendiri', [PendiriController::class, 'store'])->name('admin.pendiri.store');
+    // Route::get('/admin/pendiri/{id}/edit', [PendiriController::class, 'edit'])->name('admin.pendiri.edit');
+    // Route::put('/admin/pendiri/{id}', [PendiriController::class, 'update'])->name('admin.pendiri.update');
+    // Route::delete('/admin/pendiri/{id}', [PendiriController::class, 'destroy'])->name('admin.pendiri.destroy');
 
-Route::get('/profil', [ProfilPantiController::class, 'index'])->name('profil.index');
-Route::post('/profil', [ProfilPantiController::class, 'store'])->name('profil.store');
-
-
-// Ganti dengan:
-Route::post('/pendiri/store', [ProfilPantiController::class, 'storePendiri'])->name('pendiri.store');
-Route::get('/pendiri/{id}/edit', [ProfilPantiController::class, 'editPendiri'])->name('pendiri.edit');
-Route::put('/pendiri/{id}', [ProfilPantiController::class, 'updatePendiri'])->name('pendiri.update');
-Route::delete('/pendiri/{id}', [ProfilPantiController::class, 'destroyPendiri'])->name('pendiri.destroy');
-Route::get('/profil/{id}/pendiri', [ProfilPantiController::class, 'showPendiriByProfil'])->name('profil.pendiri.show');
-
-// Admin - Tentang Panti
-Route::get('/admin/tentang-panti', [ProfilPantiController::class, 'showTentang'])->name('admin.tentang.index');
-Route::post('/admin/tentang-panti', [ProfilPantiController::class, 'storeTentang'])->name('admin.tentang.store');
-
-Route::post('/tentang-panti/foto', [ProfilPantiController::class, 'storeFotoTentangPanti'])->name('tentang-panti.foto.store');
-Route::delete('/tentang-panti/foto/{id}', [ProfilPantiController::class, 'destroyFotoTentangPanti'])->name('tentang-panti.foto.destroy');
-
-// Route untuk foto tentang panti
-Route::post('/admin/tentang-panti/foto', [ProfilPantiController::class, 'storeFotoTentangPanti'])->name('admin.tentang-panti.foto.store');
-Route::delete('/admin/tentang-panti/foto/{id}', [ProfilPantiController::class, 'destroyFotoTentangPanti'])->name('admin.tentang-panti.foto.destroy');
+    Route::get('/profil', [ProfilPantiController::class, 'index'])->name('profil.index');
+    Route::post('/profil', [ProfilPantiController::class, 'store'])->name('profil.store');
 
 
-// Route::post('/tentang-panti/{id}/foto', [TentangPantiFotoController::class, 'store'])->name('tentang-panti.foto.store');
+    // Ganti dengan:
+    Route::post('/pendiri/store', [ProfilPantiController::class, 'storePendiri'])->name('pendiri.store');
+    Route::get('/pendiri/{id}/edit', [ProfilPantiController::class, 'editPendiri'])->name('pendiri.edit');
+    Route::put('/pendiri/{id}', [ProfilPantiController::class, 'updatePendiri'])->name('pendiri.update');
+    Route::delete('/pendiri/{id}', [ProfilPantiController::class, 'destroyPendiri'])->name('pendiri.destroy');
+    Route::get('/profil/{id}/pendiri', [ProfilPantiController::class, 'showPendiriByProfil'])->name('profil.pendiri.show');
+
+    // Admin - Tentang Panti
+    Route::get('/admin/tentang-panti', [ProfilPantiController::class, 'showTentang'])->name('admin.tentang.index');
+    Route::post('/admin/tentang-panti', [ProfilPantiController::class, 'storeTentang'])->name('admin.tentang.store');
+
+    Route::post('/tentang-panti/foto', [ProfilPantiController::class, 'storeFotoTentangPanti'])->name('tentang-panti.foto.store');
+    Route::delete('/tentang-panti/foto/{id}', [ProfilPantiController::class, 'destroyFotoTentangPanti'])->name('tentang-panti.foto.destroy');
+
+    // Route untuk foto tentang panti
+    Route::post('/admin/tentang-panti/foto', [ProfilPantiController::class, 'storeFotoTentangPanti'])->name('admin.tentang-panti.foto.store');
+    Route::delete('/admin/tentang-panti/foto/{id}', [ProfilPantiController::class, 'destroyFotoTentangPanti'])->name('admin.tentang-panti.foto.destroy');
 
 
-    // Route::resource('pendiri', \App\Http\Controllers\PendiriController::class);
+    // Route::post('/tentang-panti/{id}/foto', [TentangPantiFotoController::class, 'store'])->name('tentang-panti.foto.store');
 
 
-    // Kebutuhan
-    Route::resource('kebutuhan', KebutuhanController::class);
+        // Route::resource('pendiri', \App\Http\Controllers\PendiriController::class);
 
 
+        // Kebutuhan
+        Route::resource('kebutuhan', KebutuhanController::class);
 
- 
-    Route::get('/donasi', [DonasiController::class, 'index'])->name('donasi.index');
-    Route::get('/donasi/create', [DonasiController::class, 'create'])->name('donasi.create');
-    Route::post('/donasi', [DonasiController::class, 'store'])->name('donasi.store');
-    Route::delete('/donasi/{id}', [DonasiController::class, 'destroy'])->name('donasi.destroy');
 
 
     
+        Route::get('/donasi', [DonasiController::class, 'index'])->name('donasi.index');
+        Route::get('/donasi/create', [DonasiController::class, 'create'])->name('donasi.create');
+        Route::post('/donasi', [DonasiController::class, 'store'])->name('donasi.store');
+        Route::delete('/donasi/{id}', [DonasiController::class, 'destroy'])->name('donasi.destroy');
+
+
+        
 });
 
 
