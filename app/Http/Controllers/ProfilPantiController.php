@@ -16,7 +16,6 @@ class ProfilPantiController extends Controller
     {
         $profil = ProfilPanti::first();
         $pendiri = $profil ? Pendiri::where('profil_panti_id', $profil->id)->get() : collect();
-        $tentang = TentangPanti::with('galeriFoto')->first();
 
         return view('admin.pages.profile', compact('profil', 'pendiri'));
     }
@@ -250,45 +249,5 @@ public function showPublic()
 
 //     return redirect()->back()->with('success', 'Informasi tentang panti berhasil diperbarui!');
 // }
-
-public function storeFotoTentangPanti(Request $request)
-{
-    $request->validate([
-        'foto' => 'required|image|mimes:jpeg,png,jpg,gif',
-    ]);
-
-    $tentang = TentangPanti::firstOrCreate(['id' => 1]);
-
-    // Batasi maksimal 6 foto
-    if ($tentang->galeriFoto()->count() >= 6) {
-        return back()->with('error', 'Maksimal 6 foto diperbolehkan.');
-    }
-
-    $file = $request->file('foto');
-    $filename = time() . '_' . $file->getClientOriginalName();
-    $file->storeAs('public/tentang_panti_foto', $filename);
-
-    TentangPantiFoto::create([
-        'tentang_panti_id' => $tentang->id,
-        'foto_path' => 'tentang_panti_foto/' . $filename,
-    ]);
-
-    return back()->with('success', 'Foto berhasil diunggah.');
-}
-
-public function destroyFotoTentangPanti($id)
-{
-    $foto = TentangPantiFoto::findOrFail($id);
-
-    if (Storage::exists('public/' . $foto->foto_path)) {
-        Storage::delete('public/' . $foto->foto_path);
-    }
-
-    $foto->delete();
-
-    return back()->with('success', 'Foto berhasil dihapus.');
-}
-
-
 
 }
