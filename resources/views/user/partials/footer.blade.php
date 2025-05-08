@@ -30,29 +30,54 @@
 
 				<div class="col-md-2">
 
-					<div class="footer-menu menu-item-02">
+					<!-- <div class="footer-menu menu-item-02">
 						<h5>quick links</h5>
 						<ul class="menu-list">
 							<li class="menu-item">
-								<a href="#">home</a>
+								<a href="#">Beranda</a>
 							</li>
 							<li class="menu-item">
-								<a href="#">about us </a>
+								<a href="#">Profil</a>
 							</li>
 							<li class="menu-item">
-								<a href="#">services</a>
+								<a href="#">Kegiatan</a>
 							</li>
 							<li class="menu-item">
-								<a href="#">portfolios</a>
+								<a href="#">Kebutuhan</a>
 							</li>
 							<li class="menu-item">
-								<a href="#">blogs</a>
+								<a href="#">Operasional</a>
 							</li>
 							<li class="menu-item">
-								<a href="#">contact us</a>
+								<a href="#">Donasi</a>
 							</li>
 						</ul>
-					</div>
+					</div> -->
+
+					<div class="footer-menu menu-item-02">
+	<h5>quick links</h5>
+	<ul class="menu-list">
+		<li class="menu-item">
+			<a href="{{ route('home') }}">Beranda</a>
+		</li>
+		<li class="menu-item">
+			<a href="{{ route('profilPanti') }}">Profil</a>
+		</li>
+		<li class="menu-item">
+			<a href="{{ route('kegiatanpantiasuhan') }}">Kegiatan</a>
+		</li>
+		<li class="menu-item">
+			<a href="{{ route('kebutuhanp') }}">Kebutuhan</a>
+		</li>
+		<li class="menu-item">
+			<a href="{{ route('operasional') }}">Operasional</a>
+		</li>
+		<li class="menu-item">
+			<a href="{{ route('donatur') }}">Donasi</a>
+		</li>
+	</ul>
+</div>
+
 
 				</div>
 
@@ -62,16 +87,14 @@
 						<h5>contact info</h5>
 						<ul class="menu-list">
 							<li class="menu-item">
-								<i class="icon icon-location"></i>2489 Locust Court, Los Angeles
-							</li>
+								<i class="icon icon-location"></i>{{ $profil->alamat ?? 'Alamat belum diisi' }}</li>
+							<!-- <li class="menu-item">
+								<i class="icon icon-location2"></i>Jl. Gereja Silamosik II
+							</li> -->
 							<li class="menu-item">
-								<i class="icon icon-location2"></i>3927 Red Maple Drive, Los Angeles
-							</li>
+								<i class="icon icon-phone"></i>{{ $profil->nomor_telepon ?? 'Nomor telepon belum diisi' }}</li>
 							<li class="menu-item">
-								<i class="icon icon-phone"></i>+63 667 341 3463
-							</li>
-							<li class="menu-item">
-								<i class="icon icon-envelope-o"></i><a href="#" class="mail-id">contact@example.com</a>
+								<i class="icon icon-envelope-o"></i><a href="#" class="mail-id">{{ $profil->email ?? 'Email belum diisi' }}</a>
 							</li>
 						</ul>
 					</div>
@@ -110,7 +133,7 @@
 		</div>
 	</footer>
 
-	<div id="footer-bottom">
+	<!-- <div id="footer-bottom">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
@@ -120,10 +143,10 @@
 				</div>
 				<div class="col-md-6">
 					<div class="copyright text-right">
-						<!-- <p>HTML Template by <a href="https://www.templatesjungle.com/"
-								target="_blank">TemplatesJungle</a> distributed By <a href="https://themewagon.com" target="blank">ThemeWagon</a> </p> -->
+						<p>HTML Template by <a href="https://www.templatesjungle.com/"
+								target="_blank">TemplatesJungle</a> distributed By <a href="https://themewagon.com" target="blank">ThemeWagon</a> </p>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->

@@ -8,11 +8,12 @@
 							<li class="nav__list-item {{ Route::is('profil') ? 'active-nav' : '' }}"><a href="{{ route('profilPanti') }}" class="hover-target">Profil</a></li>
 							<li class="nav__list-item {{ Route::is('kegiatanpantiasuhan') ? 'active-nav' : '' }}"><a href="{{ route('kegiatanpantiasuhan') }}" class="hover-target">Kegiatan</a></li>
 							<li class="nav__list-item {{ Route::is('kebutuhanp') ? 'active-nav' : '' }}"><a href="{{ route('kebutuhanp') }}" class="hover-target">Kebutuhan</a></li>
+							<li class="nav__list-item {{ Route::is('operasional') ? 'active-nav' : '' }}"><a href="{{ route('operasional') }}" class="hover-target">Operasional</a></li>
 							<li class="nav__list-item {{ Route::is('donatur') ? 'active-nav' : '' }}"><a href="{{ route('donatur') }}" class="hover-target">Donasi</a></li>
-							<li class="nav__list-item"><a href="index.html" class="hover-target">Blog</a></li>
-							<li class="nav__list-item"><a href="single-post.html" class="hover-target">Single Post</a>
+							<!-- <li class="nav__list-item"><a href="index.html" class="hover-target">Blog</a></li> -->
+							<!-- <li class="nav__list-item"><a href="single-post.html" class="hover-target">Single Post</a> -->
 							</li>
-							<li class="nav__list-item"><a href="contact.html" class="hover-target">Contact us</a></li>
+							<!-- <li class="nav__list-item"><a href="contact.html" class="hover-target">Contact us</a></li> -->
 						</ul>
 					</div>
 					<div class="col-md-4 text-white">
@@ -22,17 +23,17 @@
 							aspernatur culpa repudiandae omnis.</p>
 						<ul class="list-unstyled text-light nav__block-item">
 							<li class="menu-item">
-								<i class="icon icon-location me-2"></i>2489 Locust Court, Los Angeles
+								<i class="icon icon-location me-2"></i>{{ $profil->alamat ?? 'Alamat belum diisi' }}
 							</li>
-							<li class="menu-item">
+							<!-- <li class="menu-item">
 								<i class="icon icon-location2 me-2"></i>3927 Red Maple Drive, Los Angeles
-							</li>
+							</li> -->
 							<li class="menu-item">
-								<i class="icon icon-phone me-2"></i>+63 667 341 3463
+								<i class="icon icon-phone me-2"></i>{{ $profil->nomor_telepon ?? 'Nomor telepon belum diisi' }}
 							</li>
 							<li class="menu-item">
 								<i class="icon icon-envelope-o me-2"></i><a href="#"
-									class="text-white">contact@example.com</a>
+									class="text-white">{{ $profil->email ?? 'Email belum diisi' }}</a>
 							</li>
 						</ul>
 					</div>

@@ -560,7 +560,7 @@
 	</section>
 
 	<!-- INI BAGIAN CONTACT -->
-	<section id="contact" class="scrollspy-section bg-dark padding-large">
+	<!-- <section id="contact" class="scrollspy-section bg-dark padding-large">
 		<div class="container">
 
 			<div class="row">
@@ -599,7 +599,7 @@
 
 					</div>
 
-				</div><!--left-content-->
+				</div>
 
 				<div class="col-md-6">
 					<div class="right-content">
@@ -634,12 +634,12 @@
 						</div>
 
 					</div>
-				</div><!--right-content-->
+				</div>
 
 			</div>
 
 		</div>
-	</section>
+	</section> -->
 	<!-- INI AKHIR BAGIAN CONTACT -->
 
 	{{-- include('user.partials.donasi')     --}}
@@ -647,7 +647,7 @@
 
 
 	<!-- INI BAGIAN TESTIMONIAL -->
-	<section id="testimonial" class="padding-large">
+	<!-- <section id="testimonial" class="padding-large">
 		<div class="container">
 
 			<div class="row">
@@ -679,13 +679,13 @@
 								</div>
 							</div>
 						</div>
-					</div><!--reviews-content-->
+					</div>
 
 				</div>
-			</div><!--grid-->
+			</div>
 
 		</div>
-	</section>
+	</section> -->
 	<!-- INI AKHIR BAGIAN TESTIMONIAL -->
 
 	
