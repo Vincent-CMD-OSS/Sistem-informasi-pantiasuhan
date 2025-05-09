@@ -403,12 +403,12 @@
                 <ul class="contact-icons">
                   <li>
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kunjungan@rumahharapan.org" target="_blank" title="Email ke Admin">
-                      <img src="/api/placeholder/20/20" alt="Gmail" />
+                      <img src="assets/images/gmail.jpg" alt="Gmail" />
                     </a>
                   </li>
                   <li>
                     <a href="https://wa.me/6281265455903" target="_blank" title="Chat Admin di WhatsApp">
-                      <img src="/api/placeholder/20/20" alt="WhatsApp" />
+                      <img src="assets/images/whatsapp.jpg" alt="WhatsApp" />
                     </a>
                   </li>
                 </ul>
@@ -439,7 +439,7 @@
 
         <div class="jadwal-image-container">
           <div class="jadwal-image-wrapper">
-            <img src="/api/placeholder/500/450" alt="Jadwal Kunjungan Panti Asuhan Rumah Harapan" class="jadwal-image">
+            <img src="assets/images/pp.jpg" alt="Jadwal Kunjungan Panti Asuhan Rumah Harapan" class="jadwal-image">
             <div class="jadwal-image-caption">
               <h3>Selamat Datang di Rumah Harapan</h3>
             </div>
