@@ -5,7 +5,7 @@
 				<div class="col-md-3">
 
 					<div class="footer-menu menu-item-01">
-						<img src="images/logo.png" alt="logo" class="footer-logo">
+						<img src="assets/images/logo.jpg" alt="logo" class="footer-logo">
 						<p>Tristique lacus ullamcorper massa posuere nisl molestie. Nullam motes, tortor masa. Nisl
 							tellus etiam.</p>
 						<div class="social-links">

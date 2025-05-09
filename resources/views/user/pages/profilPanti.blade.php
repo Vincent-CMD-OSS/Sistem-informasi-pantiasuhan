@@ -67,10 +67,10 @@
                     
                     <h3>Misi</h3>
                     <p>{!! nl2br(e($profil->misi ?? 'Menyediakan tempat tinggal yang aman dan nyaman bagi anak-anak.
-Memberikan pendidikan formal dan informal yang bermutu.
-Mengembangkan bakat dan minat anak-anak melalui berbagai kegiatan.
-Menanamkan nilai-nilai moral dan agama untuk membentuk kepribadian yang baik.
-Mempersiapkan anak-anak untuk dapat hidup mandiri di masyarakat.')) !!}</p>
+                    Memberikan pendidikan formal dan informal yang bermutu.
+                    Mengembangkan bakat dan minat anak-anak melalui berbagai kegiatan.
+                    Menanamkan nilai-nilai moral dan agama untuk membentuk kepribadian yang baik.
+                    Mempersiapkan anak-anak untuk dapat hidup mandiri di masyarakat.')) !!}</p>
                 </div>
                 <div class="section-image">
                     <img src="{{ asset('assets/images/visimisi.jpg') }}" alt="Aktivitas Anak-anak Panti" class="rounded-image" onerror="this.src='/api/placeholder/500/300'">
