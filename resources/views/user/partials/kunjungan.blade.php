@@ -402,7 +402,7 @@
                 
                 <ul class="contact-icons">
                   <li>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kunjungan@rumahharapan.org" target="_blank" title="Email ke Admin">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Yayasanrumahharapan2008@gmail.com" target="_blank" title="Email ke Admin">
                       <img src="assets/images/gmail.jpg" alt="Gmail" />
                     </a>
                   </li>

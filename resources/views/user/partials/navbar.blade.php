@@ -4,7 +4,7 @@
 				<div class="row p-4 p-md-0 flex-column-reverse flex-md-row g-md-5 nav__block">
 					<div class="col-md-5">
 						<ul class="nav__list d-none d-md-block">
-							<li class="nav__list-item {{ Route::is('home') ? 'active-nav' : '' }}"><a href="{{ route('home') }}" class="hover-target">Home</a></li>
+							<li class="nav__list-item {{ Route::is('home') ? 'active-nav' : '' }}"><a href="{{ route('home') }}" class="hover-target">Beranda</a></li>
 							<li class="nav__list-item {{ Route::is('profil') ? 'active-nav' : '' }}"><a href="{{ route('profilPanti') }}" class="hover-target">Profil</a></li>
 							<li class="nav__list-item {{ Route::is('kegiatanpantiasuhan') ? 'active-nav' : '' }}"><a href="{{ route('kegiatanpantiasuhan') }}" class="hover-target">Kegiatan</a></li>
 							<li class="nav__list-item {{ Route::is('kebutuhanp') ? 'active-nav' : '' }}"><a href="{{ route('kebutuhanp') }}" class="hover-target">Kebutuhan</a></li>

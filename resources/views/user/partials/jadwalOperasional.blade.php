@@ -36,7 +36,7 @@
                             </div>
                             <div class="jadwal-text">
                                 <h4>Lokasi</h4>
-                                <p>Jl. Harapan Baru No.123, Kelurahan Sukamaju, Kecamatan Sejahtera, Kota Bahagia, 12345</p>
+                                <p>Jl.Gereja Silamosik II, Kec.Bonatualunasi, Kab.Toba, Pos 22386</p>
                             </div>
                         </div>
                     </div>

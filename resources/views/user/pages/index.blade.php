@@ -171,7 +171,7 @@
 
 
 <!-- Section Pengenalan -->
-<section id="pengenalan" class="padding-large">
+{{-- <section id="pengenalan" class="padding-large">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
@@ -199,7 +199,7 @@
 			</div>
 		</div><!--row-->
 	</div><!--container-->
-</section>
+</section> --}}
 
 
 @include('user.partials.jadwalOperasional')

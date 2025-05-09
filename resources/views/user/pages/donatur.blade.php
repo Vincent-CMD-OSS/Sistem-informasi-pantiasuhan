@@ -134,18 +134,8 @@
             </section>
             </div>
         </section>
-
-
-      <!-- resources/views/components/donatur.blade.php -->
-   
-          <!-- Jika perlu slide tambahan, copy carousel-item di atas dan ubah active-nya -->
           <div id="donorCarousel" class="carousel slide" data-bs-ride="carousel">
-            <!-- INDICATORS -->
-            {{-- <div class="carousel-indicators mb-4">
-              <button type="button" data-bs-target="#donorCarousel" data-bs-slide-to="0" class="active"></button>
-              <button type="button" data-bs-target="#donorCarousel" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#donorCarousel" data-bs-slide-to="2"></button>
-            </div> --}}
+          
       
             <div class="carousel-inner">
                 <section id="donatur" class="position-relative overflow-hidden py-5">
