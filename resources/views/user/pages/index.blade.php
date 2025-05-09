@@ -1,30 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="in">
 
-<!-- <head>
-	<title>Archi - Free Architecture Portfolio HTML Template</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="author" content="TemplatesJungle">
-	<meta name="keywords" content="Free HTML Template">
-	<meta name="description" content="Free HTML Template">
-
-	<link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
-	<link rel="stylesheet" type="text/css" href="css/vendor.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-		rel="stylesheet">
-</head> -->
-
 <head>
     <title>Panti Asuhan Rumah Harapan</title>
     <meta charset="utf-8">
@@ -171,7 +147,7 @@
 						those in need and empowering every child to walk in their purpose.</p>
 
 					<div class="btn-wrap">
-						<a href="{{ route('profilPanti') }}" class="btn btn-accent btn-xlarge btn-rounded">View my portfolio</a>
+						<a href="{{ route('profilPanti') }}" class="btn btn-accent btn-xlarge btn-rounded">Selengkapnya</a>
 					</div>
 
 				</div>
