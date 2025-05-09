@@ -15,7 +15,7 @@
                 flex-direction: column-reverse;
             }
             .section-text, .section-image {
-                width: 100%;
+                width: 100%;                                                                          
                 margin: 10px 0;
             }
             .gallery {

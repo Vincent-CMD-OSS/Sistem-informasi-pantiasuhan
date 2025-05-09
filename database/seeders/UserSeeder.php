@@ -10,39 +10,42 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        $email = 'jeremimangatur21s08@gmail.com';
+        $users = [
+            [
+                'nama' => 'Admin 1',
+                'email' => 'jeremimangatur21s08@gmail.com',
+                'password' => 'password123',
+            ],
+            [
+                'nama' => 'User Biasa',
+                'email' => 'user1@example.com',
+                'password' => 'userpass1',
+            ],
+            [
+                'nama' => 'Pemain 1',
+                'email' => 'player1@example.com',
+                'password' => 'playerpass1',
+            ],
+            [
+                'nama' => 'Pemain 2',
+                'email' => 'player2@example.com',
+                'password' => 'playerpass2',
+            ],
+            [
+                'nama' => 'Hepaestus',
+                'email' => 'maro@gmail.com',
+                'password' => 'marojahan',
+            ],
+        ];
 
-        // Cek apakah email sudah ada, kalau belum baru insert
-        if (!User::where('email', $email)->exists()) {
-            User::create([
-                'nama' => 'Admin 1', // ← ganti 'name' jadi 'nama'
-                'email' => $email,
-                'password' => Hash::make('password123'),
-            ]);
-                // Bisa tambah user lain juga:
-            // User::create([
-            //     'name' => 'User Biasa',
-            //     'email' => 'user@example.com',
-            //     'password' => Hash::make('userpass'),
-            // ]);
-
-            // User::create([
-            //     'name' => 'Pemain',
-            //     'email' => 'user@example.com',
-            //     'password' => Hash::make('userpass'),
-            // ]);
-            // Bisa tambah user lain juga:
-            // User::create([
-            //     'name' => 'User Biasa',
-            //     'email' => 'user@example.com',
-            //     'password' => Hash::make('userpass'),
-            // ]);
-
-            // User::create([
-            //     'name' => 'Pemain',
-            //     'email' => 'user@example.com',
-            //     'password' => Hash::make('userpass'),
-            // ]);
+        foreach ($users as $data) {
+            if (!User::where('email', $data['email'])->exists()) {
+                User::create([
+                    'nama' => $data['nama'],
+                    'email' => $data['email'],
+                    'password' => Hash::make($data['password']),
+                ]);
+            }
         }
     }
 }
